@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Get your own code at fontawesome.com-->
+    <title>Profile</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header__menu">
+            <div class="header__menu__left_bar">
+                <p class="header__menu__text">
+                    г.Москва
+                </p>
+                <p class="header__menu__line"></p>
+                <p class="header__menu__number">8 (902) 919-57-37</p>
+            </div>
+            <div class="header__menu__right_bar">
+                <p class="header__menu__shop">Магазины</p>
+                <p class="header__menu__line"></p>
+                <p class="header__menu__stocks">Акции и новости</p>
+            </div>
+        </div>
+    </div>
+    <div class="screen">
+        <div class="screen__menu">
+            <div class="screen__menu__left_bar">
+                <div class="left_bar__men">
+                    <div data-path="one" class="left_bar__men__text dropdown">Мужчины<i class="bi bi-caret-down-fill"></i></div>
+                    <ul data-target="one" class="dropdown_menu">
+                        <li><a class="li_men">Брюки</a></li>
+                        <li><a class="li_men">Верхняя одежда</a></li>
+                        <li><a class="li_men">Джеиперы</a></li>
+                        <li><a class="li_men">Джинсы</a></li>
+                        <li><a class="li_men">Домашняя одежда</a></li>
+                        <li><a class="li_men">Жилеты</a></li>
+                        <li><a class="li_men">Обувь</a></li>
+                    </ul>
+                </div>
+                <div class="left_bar__women">
+                    <div data-path="two" class="left_bar__men__text dropdown">Женщины<i class="bi bi-caret-down-fill"></i></div>
+                    <ul data-target="two" class="dropdown_menu">
+                        <li><a class="li_men">Брюки</a></li>
+                        <li><a class="li_men">Верхняя одежда</a></li>
+                        <li><a class="li_men">Джеиперы</a></li>
+                        <li><a class="li_men">Джинсы</a></li>
+                        <li><a class="li_men">Домашняя одежда</a></li>
+                        <li><a class="li_men">Жилеты</a></li>
+                        <li><a class="li_men">Обувь</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screen__menu__logo">
+                <img src="/assets/img/Frame.png">
+                <p class="screen__menu__logo__text">the loop</p>
+            </div>
+            <div class="screen__menu__right_bar">
+                <p class="right_bar__payment">Оплата</p>
+                <p class="right_bar__delivery">Доставка</p>
+                <div class="right__bar__basket">
+                    <i class="bi bi-basket2-fill"></i>
+                    <div class="basket__first_part"></div>
+                    <div class="basket__second_part"></div>
+                    <p class="basket__number">0</p>
+                </div>
+                <i class="bi bi-person-fill"></i>
+            </div>
+        </div>
+        <div class="screen__all">
+            <div class="screen__all__text">
+                <div class="screen__all__text__login">
+                    <p class="text__login">Войдите или зарегистрируйтесь</p>
+                    <p class="text__login__hint">Чтобы вы смогли делать покупки, оформлять заказы, а также</p>
+                    <div class="text__login__orders">
+                        <i class="bi bi-truck"></i>
+                        <p class="orders__text">Отслеживать заказы</p>
+                    </div>
+                    <div class="text__login__bonuses">
+                        <i class="bi bi-award-fill"></i>
+                        <p class="bonuses__text">Тратить бонусные баллы</p>
+                    </div>
+                    <div class="text__login__discounts">
+                        <i class="bi bi-tags"></i>
+                        <p class="discounts__text">Пользоваться персональными скидками</p>
+                    </div>
+                </div>
+                <div id="text__button">
+                    <a class="text__button url">ВОЙДИТЕ ИЛИ ЗАРЕГИСТРИРУЙТЕСЬ</a>
+                </div>
+                <div class="window" id="window">
+                    <div class="window__cantainer">
+                        <div class="window__body" id="window__body">
+                            <div class="screen__menu__logo">
+                                <img src="/assets/img/Frame.png">
+                                <p class="screen__menu__logo__text">the loop</p>
+                            </div>
+                            <p class="window__body__text" id="window__body__text">Вход в личный кабинет</p>
+                            <form class="form" id="form">
+                                <input id="inpmail" type="text" placeholder="Электронная почта">
+                                <br>
+                                <input id="inppas" type="text" placeholder="Пароль">
+                                <br>
+                                <button id="butlog">Авторизоваться</button>
+                                <a class="areg" id="form2reg">Регистрация</a>
+                            </form>
+                            <p class="window__body__text2" id="window__body__text2">Регистрация</p>
+                            <form class="form2" id="form2">
+                                <input id="inpname" type="text" placeholder="Имя">
+                                <br>
+                                <input id="inpmail2" type="text" placeholder="Электронная почта">
+                                <br>
+                                <input id="inppas2" type="text" placeholder="Пароль">
+                                <br>
+                                <input id="inppas3" type="text" placeholder="Повторите пароль">
+                                <br>
+                                <button id="butreg">Зарегистрироваться</button>
+                                <a class="alog" id="formlog">Войти</a>
+                            </form>
+                            <div class="window__close" id="window__close">&#10006</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="screen__all__text__icons">
+                    <img class="icons__img" src="/assets/img/Mask group.png">
+                    <img class="icons__img2" src="/assets/img/Mask group (1).png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__all">
+            <div class="footer__all__logo">
+                <img src="/assets/img/Frame.png">
+                <p class="footer__all__logo__text">the loop</p>
+            </div>     
+            <div class="footer__all__worked">
+                <p class="teams">Работали:</p>
+                <p class="worker">first worker</p>
+                <p class="worker">second worker</p>
+                <p class="worker">third worker</p>
+                <p class="worker">fourth worker</p>
+                <p class="worker">fifth worker</p>
+                <p class="worker">sixth worker</p>
+                <p class="worker">seventh worker</p>
+                <p class="worker">eighth worker</p>
+            </div>
+            <div class="footer__all__categories">
+                <p class="categories">Категории:</p>
+                <p class="men">Мужчины</p>
+                <p class="women">Женщины</p>
+            </div>
+            <div class="footer__all__social_networks">
+                <p class="social_networks">Соц. сети:</p>
+                <div class="social_networks__block">
+                    <a class="url" href="https://github.com/Scelegod"><i class="bi bi-github" ></i></a>
+                    <div class="p soc_net">Scelegod</div>
+                </div>
+                <div class="social_networks__block">
+                    <a class="url" href="#"><i class="bi bi-github" ></i></a>
+                    <div class="p soc_net">worker</div>
+                </div>
+                <div class="social_networks__block">
+                    <a class="url" href="#"><i class="bi bi-github" ></i></a>
+                    <div class="p soc_net">worker</div>
+                </div>
+                <div class="social_networks__block">
+                    <a class="url" href="#"><i class="bi bi-github" ></i></a>
+                    <div class="p soc_net">worker</div>
+                </div>
+                <div class="social_networks__block">
+                    <a class="url" href="#"><i class="bi bi-github" ></i></a>
+                    <div class="p soc_net">worker</div>
+                </div>
+                <div class="social_networks__block">
+                    <a class="url" href="#"><i class="bi bi-github" ></i></a>
+                    <div class="p soc_net">worker</div>
+                </div>
+                <div class="social_networks__block">
+                    <a class="url" href="#"><i class="bi bi-github" ></i></a>
+                    <div class="p soc_net">worker</div>
+                </div>
+                <div class="social_networks__block">
+                    <a class="url" href="#"><i class="bi bi-github" ></i></a>
+                    <div class="p soc_net">worker</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/js.js"></script>
+</body>
+</html>
