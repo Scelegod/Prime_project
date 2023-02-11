@@ -35,30 +35,46 @@ formlog.addEventListener('click', function(){
 });
 
 //Выпадающий список
-let intervalId;
+document.addEventListener('DOMContentLoaded', () =>{
+//  1. По клику на пункты верхнего меню открывать dropdown
+//  2. По клюку (повторному) на эти пункты - закрывать dropdown
+//  3. По клюку на любое место сайта, кроме меню - закрывать dropdown
 
-document.querySelectorAll('.dropdown').forEach(e => {
-    e.addEventListener('click', e =>{
-        const menu = e.currentTarget.dataset.path;
-        document.querySelectorAll('.dropdown_menu').forEach(e => {
-            if(!document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
-                // e.classList.remove('dropdown_menu.active');
-                // e.classList.remove('open');
-                document.querySelector(`[data-target=${menu}]`).classList.add('dropdown_menu.active');
-                document.querySelector(`[data-target=${menu}]`).classList.remove('dropdown_menu');
-                intervalId = setTimeout(() => {
-                    document.querySelector(`[data-target=${menu}]`).classList.add('open');
-                },1);
-            }
+    const menuBtns = document.querySelectorAll('.menu__btn');
+    const drops = document.querySelectorAll('.dropdown');
+    
+    menuBtns.forEach(el => {
+        el.addEventListener('click', (e) =>{
+            let currentBtn = e.currentTarget;
+            let drop = currentBtn.closest('.menu__item').querySelector('.dropdown'); 
 
-            if(document.querySelector(`[data-target=${menu}]`).classList.contains('open')){
-                document.querySelector(`[data-target=${menu}]`).classList.add('dropdown_menu');
-                document.querySelector(`[data-target=${menu}]`).classList.remove('dropdown_menu.active');
-                clearTimeout(intervalId);   
-                intervalId = setTimeout(()=>{
-                    document.querySelector(`[data-target=${menu}]`).classList.remove('open');
-                },1);
-            }
+            menuBtns.forEach(el => {
+                if(el !== currentBtn){
+                    el.classList.remove('menu__btn--active');
+                }
+            });
+
+            drops.forEach(el =>{
+                if(el !== drop){
+                    el.classList.remove('dropdown--active');
+                }
+            });
+
+            drop.classList.toggle('dropdown--active');
+            currentBtn.classList.add('menu__btn--active');
+            // console.log(currentBtn);
+            // console.log(drop);
         });
+    });
+    document.addEventListener('click', (e) => {
+        if(!e.target.closest('.menu')){
+            menuBtns.forEach(el => {
+                el.classList.remove('menu__btn--active');
+            });
+
+            drops.forEach(el =>{
+                el.classList.remove('dropdown--active');
+            });
+        }
     });
 });

@@ -460,16 +460,56 @@
     color: white;
 }
 /* ___________________________________________________Выпадающий список_____________________________________ */
-.dropdown{
-    margin-right: 10px;
-}
-.dropdown_menu{
-    display: none;
-}
-.dropdown_menu.active{
-    display: block;
-    /* z-index: 2; */
-}
-li{
+.list-reset{
+    margin: 0;
+    padding: 0;
     list-style: none;
+    text-decoration: none;
+}
+.menu{
+    display: inline-flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+.menu__item:not(:last-child){
+    margin-right: 30px;
+}
+.menu__item{
+    position: relative;
+}
+.menu__btn{
+    cursor: pointer;
+    background: white;
+    color: #212121;
+    border: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+.menu__btn--active{
+    background-color: #cba286;
+}
+.dropdown{
+    /* display: none; */
+    position: absolute;
+    left: 0;
+    background-color:#D7B399;
+    top: 100%;
+    width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility;
+}
+.dropdown--active{
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown__link{
+    color: #212121;
+    padding: 10px 10px;
+    display: block;
+    width: 100%;
+    /* text-decoration: none; */
+}
+.dropdown__link:hover{
+    background-color: #946b4e;
 }
