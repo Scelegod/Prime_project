@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             });
 
             drop.classList.toggle('dropdown--active');
-            currentBtn.classList.add('menu__btn--active');
+            currentBtn.classList.toggle('menu__btn--active');
             // console.log(currentBtn);
             // console.log(drop);
         });

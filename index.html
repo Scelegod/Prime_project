@@ -137,23 +137,23 @@
                                 <p class="screen__menu__logo__text">the loop</p>
                             </div>
                             <p class="window__body__text" id="window__body__text">Вход в личный кабинет</p>
-                            <form class="form" id="form">
-                                <input id="inpmail" type="text" placeholder="Электронная почта">
+                            <form class="form" id="form" action="/php/login.php" method="post">
+                                <input id="inpmail" type="text" name="email" placeholder="Электронная почта">
                                 <br>
-                                <input id="inppas" type="text" placeholder="Пароль">
+                                <input id="inppas" type="text" name="pass" placeholder="Пароль">
                                 <br>
                                 <button id="butlog">Авторизоваться</button>
                                 <a class="areg" id="form2reg">Регистрация</a>
                             </form>
                             <p class="window__body__text2" id="window__body__text2">Регистрация</p>
-                            <form class="form2" id="form2">
-                                <input id="inpname" type="text" placeholder="Имя">
+                            <form class="form2" id="form2" action="/php/signup.php" method="post">
+                                <input id="inpname" type="text" name="name" placeholder="Имя">
                                 <br>
-                                <input id="inpmail2" type="text" placeholder="Электронная почта">
+                                <input id="inpmail2" type="text" name="email" placeholder="Электронная почта">
                                 <br>
-                                <input id="inppas2" type="text" placeholder="Пароль">
+                                <input id="inppas2" type="text" name="pass" placeholder="Пароль">
                                 <br>
-                                <input id="inppas3" type="text" placeholder="Повторите пароль">
+                                <input id="inppas3" type="text" name="pass2"placeholder="Повторите пароль">
                                 <br>
                                 <button id="butreg">Зарегистрироваться</button>
                                 <a class="alog" id="formlog">Войти</a>
