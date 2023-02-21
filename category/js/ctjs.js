@@ -168,11 +168,72 @@ function sumObject(selector, span){
     span2.textContent = sum;
 }
     
-let all_number = document.querySelector('.all_number');
-let allGoods = document.querySelectorAll('.category__number');
-let sum = 0;
-for(let i of allGoods){
-    sum += +i.textContent;
-    console.log(i.textContent);
+function allSum(selector, span){
+    let allGoods = document.querySelectorAll('.' + selector);
+    let all_number = document.querySelector('.' + span);
+    let sum = 0;
+    for(let i of allGoods){
+        sum += +i.textContent;
+        // console.log(i.textContent);
+    }
+    all_number.textContent = sum; 
 }
-all_number.textContent = sum; 
+allSum('category__number','all_number');
+
+
+let btnTshirts = document.querySelector('.btnTshirts');
+let btnPants = document.querySelector('.btnPants');
+let btnJacket = document.querySelector('.btnJacket');
+let btnHoodies = document.querySelector('.btnHoodies');
+let btnJeans = document.querySelector('.btnJeans');
+let btnHomclot = document.querySelector('.btnHomclot');
+let btnShoes = document.querySelector('.btnShoes');
+
+let tshirts = document.querySelectorAll('.tshirts');
+let jacket = document.querySelectorAll('.jacket');
+let hoodies = document.querySelectorAll('.hoodies');
+let jeans = document.querySelectorAll('.jeans');
+let homclot = document.querySelectorAll('.homclot');
+let shoes = document.querySelectorAll('.shoes');
+let pants = document.querySelectorAll('.pants');
+
+
+document.addEventListener('DOMContentLoaded',() =>{
+    const liBtn = document.querySelectorAll('.category__text');
+    const drops2 = document.querySelectorAll('.tshirts');
+
+    liBtn.forEach(el => {
+        el.addEventListener('click', (e) =>{
+            const currentBtn = e.currentTarget;
+            const drop2 = currentBtn.closest('.category__text').querySelectorAll('.tshirts', '.jacket','.hoodies','.jeans','.homclot','.shoes','.pants');
+            console.log(e.currentTarget);
+            console.log(drop2);
+            
+            liBtn.forEach(el =>{
+                if(el !== currentBtn){
+                    el.classList.remove('menu__btn--active');
+                }
+            });
+
+            drops2.forEach(el =>{
+                if(el !== drop2){
+                    el.classList.remove('dropdown--active');
+                }
+            });
+            drop2.classList.toggle('dropdown--active');
+            currentBtn.classList.toggle('menu__btn--active');
+
+        });
+    });
+    document.addEventListener('click', (e) => {
+        if(!e.target.closest('.menu')){
+            liBtn.forEach(el => {
+                el.classList.remove('menu__btn--active');
+            });
+
+            drops2.forEach(el =>{
+                el.classList.remove('dropdown--active');
+            });
+        }
+    });
+});

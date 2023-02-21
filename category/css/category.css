@@ -5,6 +5,9 @@
     
 }
 /* header_______________________________________________________________________________ */
+body{
+    background-color:#8D8D8D;
+}
 .header{
     height: 48px;
     width: 100%;
@@ -305,10 +308,7 @@
     text-transform: uppercase;
     color: #000000;
 }
-.category__text:hover{
-    background-color:#cba286;
-    color: white;
-}
+
 /* ___________________________________________________Выпадающий список_____________________________________ */
 .list-reset{
     margin: 0;
@@ -385,7 +385,7 @@
     margin-left: 379px;
     /* margin-right: 504px; */
     /* border: 1px solid blue; */
-
+    
 }
 
 .footer__all__logo__text{
@@ -437,5 +437,21 @@
 }
 .url{
     text-decoration: none;
+    color: white;
+}
+
+
+
+/* _____________________________________________Кнопки_списка______________________________________ */
+.dispNone{
+    display: none;
+}
+.category__text:hover{
+    background-color:#cba286;
+    color: white;
+}
+
+.btnColor{
+    background-color: #cba286;
     color: white;
 }
