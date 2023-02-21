@@ -147,47 +147,22 @@ for(let elem of goods){
 
 }
 
-// let number_shoes = document.querySelector('.number_shoes');
-// let number_tshirts = document.querySelector('.number_tshirts');
-// let number_homclot = document.querySelector('.number_homclot');
-// let number_jeans = document.querySelector('.number_jeans');
-// let number_hoodies = document.querySelector('.number_hoodies');
-// let number_jacket = document.querySelector('.number_jacket');
-// let number_pants = document.querySelector('.number_pants');
+function sumObject(selector, span){
+    let elem = document.querySelectorAll('.' + selector);
+    let span2 = document.querySelector('.' + span);
+    let sum = 0;
+    for(let i of elem){
+        i.setAttribute("data-" + selector +"", 1);
+        sum += 1;
+    }
+    span2.textContent = sum;
+}
+sumObject('shoes', 'number_shoes');
+sumObject('pants', 'number_pants');
+sumObject('jacket', 'number_jacket');
+sumObject('jeans', 'number_jeans');
+sumObject('hoodies', 'number_hoodies');
+sumObject('homclot', 'number_homclot');
+sumObject('tshirts', 'number_tshirts');
 
-// let shoes = document.querySelectorAll('.shoes');
-// let tshirts = document.querySelectorAll('.tshirts');
-// let homclot = document.querySelectorAll('.homclot');
-// let jeans = document.querySelectorAll('.jeans');
-// let hoodies = document.querySelectorAll('.hoodies');
-// let jacket = document.querySelectorAll('.jacket');
-// let pants = document.querySelectorAll('.pants');
-
-// let sum = 0;
-// for(let i of shoes){
-//     i.setAttribute('data-shoes', 1);
-//     sum += +i.dataset.shoes;
-// }
-// number_shoes.textContent = sum;
-// for(let i of tshirts){
-//     i.setAttribute('data-tshirts', 1);
-//     sum += +i.dataset.tshirts;
-// }
-// number_tshirts.textContent = sum;
-
-
-// function sumObject(selector, span){
-//     let sum = 0;
-//     let elem = document.querySelectorAll('.' + selector);
-//     let span2 = document.querySelector('.' + span);
-//     for(let i of elem){
-//         i.setAttribute("data-" + selector +"", 1);
-//         console.log(i);
-//         i.dataset.selector
-//         sum += +i.dataset.selector;
-//     }
-//     span2.textContent = sum;
-//     console.log(sum);
-// }
-// sumObject('shoes', 'number_shoes');
-// sumObject('pants', 'number_shoes');
+let allGoods = document.querySelectorAll('category__text category__number');
