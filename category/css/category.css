@@ -305,7 +305,10 @@
     text-transform: uppercase;
     color: #000000;
 }
-
+.category__text:hover{
+    background-color:#cba286;
+    color: white;
+}
 /* ___________________________________________________Выпадающий список_____________________________________ */
 .list-reset{
     margin: 0;

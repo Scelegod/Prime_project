@@ -147,16 +147,8 @@ for(let elem of goods){
 
 }
 
-function sumObject(selector, span){
-    let elem = document.querySelectorAll('.' + selector);
-    let span2 = document.querySelector('.' + span);
-    let sum = 0;
-    for(let i of elem){
-        i.setAttribute("data-" + selector +"", 1);
-        sum += 1;
-    }
-    span2.textContent = sum;
-}
+
+let num = 0;
 sumObject('shoes', 'number_shoes');
 sumObject('pants', 'number_pants');
 sumObject('jacket', 'number_jacket');
@@ -165,4 +157,22 @@ sumObject('hoodies', 'number_hoodies');
 sumObject('homclot', 'number_homclot');
 sumObject('tshirts', 'number_tshirts');
 
-let allGoods = document.querySelectorAll('category__text category__number');
+
+function sumObject(selector, span){
+    let elem = document.querySelectorAll('.' + selector);
+    let span2 = document.querySelector('.' + span);
+    let sum = 0;
+    for(let i of elem){
+        sum += 1;
+    }
+    span2.textContent = sum;
+}
+    
+let all_number = document.querySelector('.all_number');
+let allGoods = document.querySelectorAll('.category__number');
+let sum = 0;
+for(let i of allGoods){
+    sum += +i.textContent;
+    console.log(i.textContent);
+}
+all_number.textContent = sum; 
