@@ -1,5 +1,5 @@
 "use strict"
-//Выпадающий список
+//____________________________________Выпадающий список___________________________________
 document.addEventListener('DOMContentLoaded', () =>{
     //  1. По клику на пункты верхнего меню открывать dropdown
     //  2. По клюку (повторному) на эти пункты - закрывать dropdown
@@ -43,9 +43,11 @@ document.addEventListener('DOMContentLoaded', () =>{
             }
         });
     });
-
-
+    
+    
+    //____________________________________Нахождение блока для отображение товаров____________________________________________________________________________
     const all__goods = document.querySelector('.all__goods');
+    //___________________________________________Массив с объектами - товарами________________________________________________________________________________
     let goods = [
         {src: '/category/assets/img/Футболка_1.png', name: 'VERSACE JEANS COUTURE', catigories: 'Фуфайка (Футболка)', price:'14 590 ₽', class: 'goods__block tshirts'},
         {src: '/category/assets/img/Футболка_2.png', name: 'Guess Jeans', catigories: 'Хлопковая футболка', price:'6 890 ₽', class: 'goods__block tshirts'},
@@ -96,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         {src: '/category/assets/img/Дом_одежда_7.png', name: 'MEDUSA SLEEVELESS UNDERSHIRT', catigories: 'Домашняя одежда', price:'500 ₽', class: 'goods__block homclot'},
         {src: '/category/assets/img/Дом_одежда_8.png', name: 'BAROCCO SILK ROBE', catigories: 'Домашняя одежда', price:'11 900 ₽', class: 'goods__block homclot'},
         {src: '/category/assets/img/Дом_одежда_9.png', name: 'LA GRECA SILK PAJAMA TOP', catigories: 'Домашняя одежда', price:'4 900 ₽', class: 'goods__block homclot'},
-
+        
         {src: '/category/assets/img/Обувь_1.png', name: 'ODISSEA SNEAKERS', catigories: 'Обувь', price:'6 100 ₽', class: 'goods__block shoes'},
         {src: '/category/assets/img/Обувь_2.png', name: 'CRYSTAL ODISSEA SNEAKERS', catigories: 'Обувь', price:'15 200 ₽', class: 'goods__block shoes'},
         {src: '/category/assets/img/Обувь_3.png', name: 'GRECA ODISSEA SNEAKERS', catigories: 'Обувь', price:'5 000 ₽', class: 'goods__block shoes'},
@@ -117,14 +119,24 @@ document.addEventListener('DOMContentLoaded', () =>{
         {src: '/category/assets/img/Брюки_8.png', name: 'MEDUSA BIGGIE LOGO SWEATPANTS', catigories: 'Брюки', price:'2 900 ₽', class: 'goods__block pants'},
         {src: '/category/assets/img/Брюки_9.png', name: 'PASTEL PINSTRIPE FLANNEL WOOL PANTS', catigories: 'Брюки', price:'6 600 ₽', class: 'goods__block pants'},
     ];
-
+//___________________________________________Создание блока и запихивание его на страницу___________________________________
+let goodsInfo = {};
+let i = 0;
 for(let elem of goods){
+    i += 1;
     const div = document.createElement('div');
     div.setAttribute('class', 'goods__block');
+    div.setAttribute('data-id', i);
+    const div2 = document.createElement('div');
+    div2.setAttribute('class', 'img__btnBasket');
 
     const img = document.createElement('img');
     img.src = elem.src;
     img.setAttribute('class', '.block__img');
+
+    const div3 = document.createElement('div');
+    div3.setAttribute('class', 'btnBasket');
+    div3.textContent = 'Добавить в корзину';
     
     const p = document.createElement('p');
     p.textContent = elem.name;
@@ -140,14 +152,62 @@ for(let elem of goods){
 
     div.setAttribute('class', elem.class);
     all__goods.appendChild(div);
-    div.appendChild(img);
+    div.appendChild(div2);
+    div2.appendChild(img);
+    div2.appendChild(div3);
     div.appendChild(p);
     div.appendChild(p2);
     div.appendChild(p3);
-
+    div.addEventListener('mouseover', function(){
+        div3.setAttribute('class', 'btnBasket_hover');
+    });
+    div.addEventListener('mouseout', function(){
+        div3.setAttribute('class', 'btnBasket');
+    });
+    div3.addEventListener('click', function(){
+        // собираем данные
+        goodsInfo = {
+            id: div.dataset.id,
+            imgSrc: img.getAttribute('src'), 
+            title: p.textContent,
+            categories: p2.textContent,
+            price: p3.textContent,
+            counter: '1'
+        }
+        
+        let card_item = document.querySelector('.card_item');
+        // Проверка есть ли такой товар 
+        let itemInCart = card_item.querySelector('[data-id="' + goodsInfo.id + '"]');
+        //Есть ли товар в корзине
+        if(itemInCart){
+            let counterElem = itemInCart.querySelector('.counter');
+            console.log(counterElem.textContent);
+            counterElem.textContent = +counterElem.textContent + +goodsInfo.counter;
+        }else{
+            // Подставляем собранные данные
+            // Если товара нет в корзине
+            let cartItemHTML = `<div class="goods__block" data-id=${goodsInfo.id}>
+                                    <div class="img__btnBasket">
+                                        <img src="${goodsInfo.imgSrc}" class=".block__img">
+                                        <div class="btnBasket">Добавить в корзину</div>
+                                    </div>
+                                    <p class="block__text_goods">${goodsInfo.title}</p>
+                                    <p class="block__text_categories">${goodsInfo.categories}</p>
+                                    <p class="block__text_price">${goodsInfo.price}</p>
+                                    <p class="block__text_price">Количество: <span class="counter">${goodsInfo.counter}</span></p>
+                                </div>`;
+            card_item.insertAdjacentHTML('beforeend', cartItemHTML);
+            console.log(goodsInfo.id);
+            console.log(card_item.children.length);
+        }
+        console.log(itemInCart);
+    });
 }
 
 
+//_____________________________________________________________________________________________________________________
+
+//_______________________________________Суммирование товаров по категориям____________________________________________
 let num = 0;
 sumObject('shoes', 'number_shoes');
 sumObject('pants', 'number_pants');
@@ -156,7 +216,6 @@ sumObject('jeans', 'number_jeans');
 sumObject('hoodies', 'number_hoodies');
 sumObject('homclot', 'number_homclot');
 sumObject('tshirts', 'number_tshirts');
-
 
 function sumObject(selector, span){
     let elem = document.querySelectorAll('.' + selector);
@@ -167,7 +226,8 @@ function sumObject(selector, span){
     }
     span2.textContent = sum;
 }
-    
+
+//__________________________________Суммирование чисел всех объектов___________________________________________________
 function allSum(selector, span){
     let allGoods = document.querySelectorAll('.' + selector);
     let all_number = document.querySelector('.' + span);
@@ -179,8 +239,9 @@ function allSum(selector, span){
     all_number.textContent = sum; 
 }
 allSum('category__number','all_number');
+//_____________________________________________________________________________________________________________________
 
-
+//__________________________________Поиск кнопок категорий_____________________________________________________________
 let btnTshirts = document.querySelector('.btnTshirts');
 let btnPants = document.querySelector('.btnPants');
 let btnJacket = document.querySelector('.btnJacket');
@@ -188,8 +249,9 @@ let btnHoodies = document.querySelector('.btnHoodies');
 let btnJeans = document.querySelector('.btnJeans');
 let btnHomclot = document.querySelector('.btnHomclot');
 let btnShoes = document.querySelector('.btnShoes');
+//_____________________________________________________________________________________________________________________
 
-
+//__________________________________Поиск товаров по категория_________________________________________________________
 let tshirts = document.querySelectorAll('.tshirts');
 let jacket = document.querySelectorAll('.jacket');
 let hoodies = document.querySelectorAll('.hoodies');
@@ -198,7 +260,8 @@ let homclot = document.querySelectorAll('.homclot');
 let shoes = document.querySelectorAll('.shoes');
 let pants = document.querySelectorAll('.pants');
 
-let allBtn = document.querySelectorAll('.category__text');
+
+//__________________________________Добавление товаров в единный массив_______________________________________________
 let arr = [];
 function arrGoods(selector){
     for(let i of selector){
@@ -212,101 +275,51 @@ arrGoods(jeans);
 arrGoods(homclot);
 arrGoods(shoes);
 arrGoods(pants);
-console.log(arr);
-console.log(allBtn);
 
+//__________________________________Поиск кнопок из списка____________________________________________________________
+let allBtn = document.querySelectorAll('.category__text');
+
+//__________________________________Нахождение главной кнопки одежды_______________________________________________
+let btn__clothes = document.querySelector('.btn__clothes');
+//__________________________________Удаление display none из блока класса товара___________________________________
+btn__clothes.addEventListener('click', function(e){
+    for(let i of arr){
+        i.classList.remove('dispNone');
+    }
+});
+
+// __________________________________Фильтрация товаров по категориям___________________________________
 for(let btn of allBtn){
     btn.addEventListener('click', function func(e){
         console.log(e.currentTarget);
-        if(e.currentTarget == btnPants){
-            btn.classList.add('btnColor');
-            for(let i of arr){
-                if(i.getAttribute('class') !== 'goods__block pants'){
-                    i.classList.add('dispNone');
-                }
-                
-                if(i.getAttribute('class') == 'goods__block pants dispNone'){
-                    btn.classList.remove('btnColor');
-                    i.classList.remove('dispNone');
-                }
-            }
-        }
-        if(e.currentTarget == btnJacket){
-            for(let i of arr){
-                if(i.getAttribute('class') !== 'goods__block jacket'){
-                    i.classList.add('dispNone');
-                    btn.classList.add('btnColor');
-                }
-                
-                if(i.getAttribute('class') == 'goods__block jacket dispNone'){
-                    btn.classList.remove('btnColor');
-                    i.classList.remove('dispNone');
-                }
-            }
-        }
-        if(e.currentTarget == btnHoodies){
-            for(let i of arr){
-                if(i.getAttribute('class') !== 'goods__block hoodies'){
-                    i.classList.add('dispNone');
-                    btn.classList.add('btnColor');
-                }
-                if(i.getAttribute('class') == 'goods__block hoodies dispNone'){
-                    btn.classList.remove('btnColor');
-                    i.classList.remove('dispNone');
-                }
-            }
-        }
-        if(e.currentTarget == btnJeans){
-            for(let i of arr){
-                if(i.getAttribute('class') !== 'goods__block jeans'){
-                    i.classList.add('dispNone');
-                    btn.classList.add('btnColor');
-                }
-
-                if(i.getAttribute('class') == 'goods__block jeans dispNone'){
-                    i.classList.remove('dispNone');
-                    btn.classList.remove('btnColor');
-
-                }
-            }
-        }
-        if(e.currentTarget == btnHomclot){
-            for(let i of arr){
-                if(i.getAttribute('class') !== 'goods__block homclot'){
-                    i.classList.add('dispNone');
-                    btn.classList.add('btnColor');
-                }
-
-                if(i.getAttribute('class') == 'goods__block homclot dispNone'){
-                        btn.classList.remove('btnColor');
-                    i.classList.remove('dispNone');
-                }
-            }
-        }
-        if(e.currentTarget == btnTshirts){
-            for(let i of arr){
-                if(i.getAttribute('class') !== 'goods__block tshirts'){
-                    i.classList.add('dispNone');
-                    btn.classList.add('btnColor');
-                }
-
-                if(i.getAttribute('class') == 'goods__block tshirts dispNone'){
-                    btn.classList.remove('btnColor');
-                    i.classList.remove('dispNone');
-                }
-            }
-        }
-        if(e.currentTarget == btnShoes){
-            for(let i of arr){
-                if(i.getAttribute('class') !== 'goods__block shoes'){
-                    i.classList.add('dispNone');
-                }
-
-                if(i.getAttribute('class') == 'goods__block shoes dispNone'){
-                    i.classList.remove('dispNone');
-                }
-            }
-        }
-        // btn.removeEventListener('click', func);
+        ulBtn(btnPants, 'goods__block pants', 'dispNone', e);
+        ulBtn(btnJacket, 'goods__block jacket', 'dispNone', e);
+        ulBtn(btnHoodies, 'goods__block hoodies', 'dispNone', e);
+        ulBtn(btnJeans, 'goods__block jeans', 'dispNone', e);
+        ulBtn(btnHomclot, 'goods__block homclot', 'dispNone', e);
+        ulBtn(btnTshirts, 'goods__block tshirts', 'dispNone', e);
+        ulBtn(btnShoes, 'goods__block shoes', 'dispNone', e);
     });
 }
+
+function ulBtn(button, class1, classNone, e){
+    if(e.currentTarget == button){
+        for(let iBtn of allBtn){
+                iBtn.classList.remove('btnColor');
+            }
+            button.classList.add('btnColor');
+        for(let i of arr){
+            if(i.getAttribute('class') !== class1){
+                i.classList.add(classNone);
+            }
+            
+            if(i.getAttribute('class') == class1 + ' ' + classNone){
+                i.classList.remove(classNone);
+            }
+        }
+    }
+}
+
+//Сделать функцию которая добавляет товары в корзину
+//Счетчик товаров в корзине
+//При возможности добавить модальное окно для товаров

@@ -5,9 +5,9 @@
     
 }
 /* header_______________________________________________________________________________ */
-/* body{ */
-    /* background-color:#8D8D8D; */
-/* } */
+body{ 
+    background: linear-gradient(white, rgb(206, 252, 255));
+}
 .header{
     height: 48px;
     width: 100%;
@@ -454,4 +454,56 @@
 .btnColor{
     background-color: #cba286;
     color: white;
+}
+.btn__clothes{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 255px;
+}
+.btn__clothes:hover{
+    background-color: rgb(203, 162, 134);
+    color: white;
+}
+/* Кнопка добавления в корзину */
+.btnBasket{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    background-color: #af8466;
+    color: white;
+    transform: translateY(calc(40px));
+    z-index: 3;
+    transition: all 200ms;
+
+}
+.btnBasket_hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    background-color: #af8466;
+    color: white;
+    transform: translateY(calc(40px));
+    z-index: 3;
+    
+
+    opacity: 0.9;
+    transform: translateY(calc(1px));
+    transition: all 400ms;
+    
+}
+.img__btnBasket{
+    display: flex;
+    position: relative;
 }
