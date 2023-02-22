@@ -216,56 +216,97 @@ console.log(arr);
 console.log(allBtn);
 
 for(let btn of allBtn){
-    btn.addEventListener('click', function(e){
-        btn.classList.toggle('btnColor');
+    btn.addEventListener('click', function func(e){
+        console.log(e.currentTarget);
         if(e.currentTarget == btnPants){
+            btn.classList.add('btnColor');
             for(let i of arr){
                 if(i.getAttribute('class') !== 'goods__block pants'){
-                    i.classList.toggle('dispNone');
+                    i.classList.add('dispNone');
                 }
-            }
-        }
-        if(e.currentTarget == btnTshirts){
-            for(let i of arr){
-                if(i.getAttribute('class') !== 'goods__block tshirts'){
-                    i.classList.toggle('dispNone');
+                
+                if(i.getAttribute('class') == 'goods__block pants dispNone'){
+                    btn.classList.remove('btnColor');
+                    i.classList.remove('dispNone');
                 }
             }
         }
         if(e.currentTarget == btnJacket){
             for(let i of arr){
                 if(i.getAttribute('class') !== 'goods__block jacket'){
-                    i.classList.toggle('dispNone');
+                    i.classList.add('dispNone');
+                    btn.classList.add('btnColor');
+                }
+                
+                if(i.getAttribute('class') == 'goods__block jacket dispNone'){
+                    btn.classList.remove('btnColor');
+                    i.classList.remove('dispNone');
                 }
             }
         }
         if(e.currentTarget == btnHoodies){
             for(let i of arr){
                 if(i.getAttribute('class') !== 'goods__block hoodies'){
-                    i.classList.toggle('dispNone');
+                    i.classList.add('dispNone');
+                    btn.classList.add('btnColor');
+                }
+                if(i.getAttribute('class') == 'goods__block hoodies dispNone'){
+                    btn.classList.remove('btnColor');
+                    i.classList.remove('dispNone');
                 }
             }
         }
         if(e.currentTarget == btnJeans){
             for(let i of arr){
                 if(i.getAttribute('class') !== 'goods__block jeans'){
-                    i.classList.toggle('dispNone');
+                    i.classList.add('dispNone');
+                    btn.classList.add('btnColor');
+                }
+
+                if(i.getAttribute('class') == 'goods__block jeans dispNone'){
+                    i.classList.remove('dispNone');
+                    btn.classList.remove('btnColor');
+
                 }
             }
         }
         if(e.currentTarget == btnHomclot){
             for(let i of arr){
                 if(i.getAttribute('class') !== 'goods__block homclot'){
-                    i.classList.toggle('dispNone');
+                    i.classList.add('dispNone');
+                    btn.classList.add('btnColor');
+                }
+
+                if(i.getAttribute('class') == 'goods__block homclot dispNone'){
+                        btn.classList.remove('btnColor');
+                    i.classList.remove('dispNone');
+                }
+            }
+        }
+        if(e.currentTarget == btnTshirts){
+            for(let i of arr){
+                if(i.getAttribute('class') !== 'goods__block tshirts'){
+                    i.classList.add('dispNone');
+                    btn.classList.add('btnColor');
+                }
+
+                if(i.getAttribute('class') == 'goods__block tshirts dispNone'){
+                    btn.classList.remove('btnColor');
+                    i.classList.remove('dispNone');
                 }
             }
         }
         if(e.currentTarget == btnShoes){
             for(let i of arr){
                 if(i.getAttribute('class') !== 'goods__block shoes'){
-                    i.classList.toggle('dispNone');
+                    i.classList.add('dispNone');
+                }
+
+                if(i.getAttribute('class') == 'goods__block shoes dispNone'){
+                    i.classList.remove('dispNone');
                 }
             }
         }
+        // btn.removeEventListener('click', func);
     });
 }
