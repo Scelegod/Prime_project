@@ -189,6 +189,7 @@ let btnJeans = document.querySelector('.btnJeans');
 let btnHomclot = document.querySelector('.btnHomclot');
 let btnShoes = document.querySelector('.btnShoes');
 
+
 let tshirts = document.querySelectorAll('.tshirts');
 let jacket = document.querySelectorAll('.jacket');
 let hoodies = document.querySelectorAll('.hoodies');
@@ -197,43 +198,74 @@ let homclot = document.querySelectorAll('.homclot');
 let shoes = document.querySelectorAll('.shoes');
 let pants = document.querySelectorAll('.pants');
 
+let allBtn = document.querySelectorAll('.category__text');
+let arr = [];
+function arrGoods(selector){
+    for(let i of selector){
+        arr.push(i);
+    }
+}
+arrGoods(tshirts);
+arrGoods(jacket);
+arrGoods(hoodies);
+arrGoods(jeans);
+arrGoods(homclot);
+arrGoods(shoes);
+arrGoods(pants);
+console.log(arr);
+console.log(allBtn);
 
-document.addEventListener('DOMContentLoaded',() =>{
-    const liBtn = document.querySelectorAll('.category__text');
-    const drops2 = document.querySelectorAll('.tshirts');
-
-    liBtn.forEach(el => {
-        el.addEventListener('click', (e) =>{
-            const currentBtn = e.currentTarget;
-            const drop2 = currentBtn.closest('.category__text').querySelectorAll('.tshirts', '.jacket','.hoodies','.jeans','.homclot','.shoes','.pants');
-            console.log(e.currentTarget);
-            console.log(drop2);
-            
-            liBtn.forEach(el =>{
-                if(el !== currentBtn){
-                    el.classList.remove('menu__btn--active');
+for(let btn of allBtn){
+    btn.addEventListener('click', function(e){
+        btn.classList.toggle('btnColor');
+        if(e.currentTarget == btnPants){
+            for(let i of arr){
+                if(i.getAttribute('class') !== 'goods__block pants'){
+                    i.classList.toggle('dispNone');
                 }
-            });
-
-            drops2.forEach(el =>{
-                if(el !== drop2){
-                    el.classList.remove('dropdown--active');
+            }
+        }
+        if(e.currentTarget == btnTshirts){
+            for(let i of arr){
+                if(i.getAttribute('class') !== 'goods__block tshirts'){
+                    i.classList.toggle('dispNone');
                 }
-            });
-            drop2.classList.toggle('dropdown--active');
-            currentBtn.classList.toggle('menu__btn--active');
-
-        });
-    });
-    document.addEventListener('click', (e) => {
-        if(!e.target.closest('.menu')){
-            liBtn.forEach(el => {
-                el.classList.remove('menu__btn--active');
-            });
-
-            drops2.forEach(el =>{
-                el.classList.remove('dropdown--active');
-            });
+            }
+        }
+        if(e.currentTarget == btnJacket){
+            for(let i of arr){
+                if(i.getAttribute('class') !== 'goods__block jacket'){
+                    i.classList.toggle('dispNone');
+                }
+            }
+        }
+        if(e.currentTarget == btnHoodies){
+            for(let i of arr){
+                if(i.getAttribute('class') !== 'goods__block hoodies'){
+                    i.classList.toggle('dispNone');
+                }
+            }
+        }
+        if(e.currentTarget == btnJeans){
+            for(let i of arr){
+                if(i.getAttribute('class') !== 'goods__block jeans'){
+                    i.classList.toggle('dispNone');
+                }
+            }
+        }
+        if(e.currentTarget == btnHomclot){
+            for(let i of arr){
+                if(i.getAttribute('class') !== 'goods__block homclot'){
+                    i.classList.toggle('dispNone');
+                }
+            }
+        }
+        if(e.currentTarget == btnShoes){
+            for(let i of arr){
+                if(i.getAttribute('class') !== 'goods__block shoes'){
+                    i.classList.toggle('dispNone');
+                }
+            }
         }
     });
-});
+}
