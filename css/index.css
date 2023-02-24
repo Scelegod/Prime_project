@@ -230,6 +230,7 @@
     background: #a47f65;
     color: #292727;
     border: 1px solid #292727;
+    cursor: pointer;
 }
 .text__button{
     display: flex;
@@ -458,6 +459,17 @@
 .url{
     text-decoration: none;
     color: white;
+}
+.url2{
+    text-decoration: none;
+}
+.url3{
+    text-decoration: none;
+    color: white;
+}
+.to_login, .to_basket{
+    text-decoration: none;
+    color: #212121;
 }
 /* ___________________________________________________Выпадающий список_____________________________________ */
 .list-reset{

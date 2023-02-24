@@ -36,45 +36,50 @@ formlog.addEventListener('click', function(){
 
 //Выпадающий список
 document.addEventListener('DOMContentLoaded', () =>{
+    let basket__number = document.querySelector('.basket__number');
+    let str = localStorage.getItem('arr');
+    let goodsInfo2 = JSON.parse(str);
+    console.log(goodsInfo2);    
+    basket__number.textContent = goodsInfo2.length;
 //  1. По клику на пункты верхнего меню открывать dropdown
 //  2. По клюку (повторному) на эти пункты - закрывать dropdown
 //  3. По клюку на любое место сайта, кроме меню - закрывать dropdown
 
-    const menuBtns = document.querySelectorAll('.menu__btn');
-    const drops = document.querySelectorAll('.dropdown');
+    // const menuBtns = document.querySelectorAll('.menu__btn');
+    // const drops = document.querySelectorAll('.dropdown');
     
-    menuBtns.forEach(el => {
-        el.addEventListener('click', (e) =>{
-            let currentBtn = e.currentTarget;
-            let drop = currentBtn.closest('.menu__item').querySelector('.dropdown'); 
+    // menuBtns.forEach(el => {
+    //     el.addEventListener('click', (e) =>{
+    //         let currentBtn = e.currentTarget;
+    //         let drop = currentBtn.closest('.menu__item').querySelector('.dropdown'); 
 
-            menuBtns.forEach(el => {
-                if(el !== currentBtn){
-                    el.classList.remove('menu__btn--active');
-                }
-            });
+    //         menuBtns.forEach(el => {
+    //             if(el !== currentBtn){
+    //                 el.classList.remove('menu__btn--active');
+    //             }
+    //         });
 
-            drops.forEach(el =>{
-                if(el !== drop){
-                    el.classList.remove('dropdown--active');
-                }
-            });
+    //         drops.forEach(el =>{
+    //             if(el !== drop){
+    //                 el.classList.remove('dropdown--active');
+    //             }
+    //         });
 
-            drop.classList.toggle('dropdown--active');
-            currentBtn.classList.toggle('menu__btn--active');
-            // console.log(currentBtn);
-            // console.log(drop);
-        });
-    });
-    document.addEventListener('click', (e) => {
-        if(!e.target.closest('.menu')){
-            menuBtns.forEach(el => {
-                el.classList.remove('menu__btn--active');
-            });
+    //         drop.classList.toggle('dropdown--active');
+    //         currentBtn.classList.toggle('menu__btn--active');
+    //         // console.log(currentBtn);
+    //         // console.log(drop);
+    //     });
+    // });
+    // document.addEventListener('click', (e) => {
+    //     if(!e.target.closest('.menu')){
+    //         menuBtns.forEach(el => {
+    //             el.classList.remove('menu__btn--active');
+    //         });
 
-            drops.forEach(el =>{
-                el.classList.remove('dropdown--active');
-            });
-        }
-    });
+    //         drops.forEach(el =>{
+    //             el.classList.remove('dropdown--active');
+    //         });
+    //     }
+    // });
 });
