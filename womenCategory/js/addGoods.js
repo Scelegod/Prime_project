@@ -1,9 +1,9 @@
 
 
 const all__goods = document.querySelector('.all__goods');
-let i = 0;
+let i = 100;
 
-for(let elem of goods){
+for(let elem of goods2){
     i += 1;
     const div = document.createElement('div');
     div.setAttribute('class', 'goods__block');

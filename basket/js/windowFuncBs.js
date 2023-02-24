@@ -11,7 +11,7 @@ window.addEventListener('click', function(event){
     if(event.target.dataset.action === 'minus'){
         if(+counter.textContent === 1 ){
             event.target.closest('.goods__block__basket').remove();
-            // toggleGoodsStatus();
+            toggleGoodsStatus();
             calcGoodsPrice()
         }
         if(+counter.textContent > 1 ){
@@ -30,7 +30,7 @@ window.addEventListener('click', function(event){
     // console.log(event.target);
     if(event.target.closest('.bi-x-circle')){
         event.target.closest('.goods__block__basket').remove();
-        // toggleGoodsStatus();
+        toggleGoodsStatus();
         calcGoodsPrice()
 
     }

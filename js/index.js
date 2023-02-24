@@ -1,6 +1,9 @@
 "use strict"
 
+
 //Он входа и регистрации
+
+
 const openWindow = document.getElementById('text__button');
 const closeWindow = document.getElementById('window__close')
 const window2 = document.getElementById('window')
@@ -36,11 +39,11 @@ formlog.addEventListener('click', function(){
 
 //Выпадающий список
 document.addEventListener('DOMContentLoaded', () =>{
+    let number = localStorage.getItem('basket__number');
+    let number2 = JSON.parse(number);
     let basket__number = document.querySelector('.basket__number');
-    let str = localStorage.getItem('arr');
-    let goodsInfo2 = JSON.parse(str);
-    console.log(goodsInfo2);    
-    basket__number.textContent = goodsInfo2.length;
+    basket__number.textContent = number2;
+
 //  1. По клику на пункты верхнего меню открывать dropdown
 //  2. По клюку (повторному) на эти пункты - закрывать dropdown
 //  3. По клюку на любое место сайта, кроме меню - закрывать dropdown
