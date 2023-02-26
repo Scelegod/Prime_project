@@ -15,13 +15,17 @@ function checkCart(){
 }
 checkCart();
 document.addEventListener('DOMContentLoaded', function(){
+let basket__number = document.querySelector('.basket__number');
     
-    
-    for(let elem of goodsInfo2){
-        const goods__basket = document.querySelector('.goods__basket');
-        let cartItemHTML = `<div class="goods__block__basket" data-id="${elem.id}">
-        <div class="basket__img__text">
-        <img src="${elem.imgSrc}" class="basket__img">
+    if(goodsInfo2 == null){
+
+    }else{
+
+        for(let elem of goodsInfo2){
+            const goods__basket = document.querySelector('.goods__basket');
+            let cartItemHTML = `<div class="goods__block__basket" data-id="${elem.id}">
+            <div class="basket__img__text">
+            <img src="${elem.imgSrc}" class="basket__img">
                 <div class="basket__text">
                 <p class="basket__text_categories">${elem.categories}</p>
                 <p class="basket__text_goods">${elem.title}</p>
@@ -38,5 +42,6 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>`;
             goods__basket.insertAdjacentHTML('beforeend', cartItemHTML);
         }
+    }
 toggleGoodsStatus();
 });
