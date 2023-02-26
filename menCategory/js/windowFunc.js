@@ -2,13 +2,16 @@
 let goodsInfo = {};
 let goodsInfo2 = [];
 let str2 = localStorage.getItem('arr');
-        goodsInfo3 = JSON.parse(str2);
-//_____________________________Клик по странице сайта________________________________________________________________________
+        
+checkCart();
+document.addEventListener('DOMContentLoaded', () =>{
+    let number = localStorage.getItem('basket__number');
+    let number2 = JSON.parse(number);
+    let basket__number = document.querySelector('.basket__number');
+    basket__number.textContent = number2;
+});
+        //_____________________________Клик по странице сайта________________________________________________________________________
 window.addEventListener('click', function(event){
-    if(event.target.closest('.menu__btn_women_btn')){
-        event.preventDefault();
-        console.log('wqedw');
-    }
     if(event.target.closest('.btnBasket_hover')){
         let goods__block = event.target.closest('.goods__block');
         
@@ -26,10 +29,10 @@ window.addEventListener('click', function(event){
         if(itemInCart){
             // console.log(itemInCart.dataset.id);
             counterElem = itemInCart.querySelector('.basket__amoynt__number');
-            counterElem.textContent = +counterElem.textContent + +goodsInfo.counter;
+            // counterElem.textContent = +counterElem.textContent + +goodsInfo.counter;
             for(let i of goodsInfo2){
                 if(itemInCart.dataset.id == i.id){
-                    i.counter = +i.counter + +i.counter;
+                    i.counter++;
                 }
             }
         }else{
@@ -60,16 +63,13 @@ window.addEventListener('click', function(event){
         let baskeNumber = 0;
         let basket__number = document.querySelector('.basket__number');
         for(let counter of goodsInfo2){
-            // console.log(counter.counter);
             baskeNumber = baskeNumber + +counter.counter; 
             basket__number.textContent = baskeNumber;
         }
-            
     }
 });
 //_______________________________Функция отслежиния при наведении товара___________________________________________________________________
 window.addEventListener('mouseover', function func(event){
-    // console.log(event.target.closest('.goods__block'));
     if(event.target.closest('.goods__block')){
         let goods__block = event.target.closest('.goods__block');
         let btnBasket = goods__block.querySelector('.btnBasket');
@@ -85,3 +85,9 @@ window.addEventListener('mouseout', function func(event){
         btnBasket.setAttribute('class', 'btnBasket');
     }
 });
+    function checkCart(){
+        //Проверяю наличие корзины в localStorage
+        if(localStorage.getItem('arr') != null){
+            goodsInfo2 = JSON.parse(localStorage.getItem('arr'));
+        }
+    }

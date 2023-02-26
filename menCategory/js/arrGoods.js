@@ -9,13 +9,13 @@ let btnShoes = document.querySelector('.btnShoes');
 //_____________________________________________________________________________________________________________________
 
 //__________________________________Поиск товаров по категория_________________________________________________________
-let tshirts = document.querySelectorAll('.tshirts');
-let jacket = document.querySelectorAll('.jacket');
-let hoodies = document.querySelectorAll('.hoodies');
-let jeans = document.querySelectorAll('.jeans');
-let homclot = document.querySelectorAll('.homclot');
-let shoes = document.querySelectorAll('.shoes');
-let pants = document.querySelectorAll('.pants');
+let tshirts_men = document.querySelectorAll('.tshirts_men');
+let jacket_men = document.querySelectorAll('.jacket_men');
+let hoodies_men = document.querySelectorAll('.hoodies_men');
+let jeans_men = document.querySelectorAll('.jeans_men');
+let homclot_men = document.querySelectorAll('.homclot_men');
+let shoes_men = document.querySelectorAll('.shoes_men');
+let pants_men = document.querySelectorAll('.pants_men');
 
 
 //__________________________________Добавление товаров в единный массив_______________________________________________
@@ -25,13 +25,13 @@ function arrGoods(selector){
         arr.push(i);
     }
 }
-arrGoods(tshirts);
-arrGoods(jacket);
-arrGoods(hoodies);
-arrGoods(jeans);
-arrGoods(homclot);
-arrGoods(shoes);
-arrGoods(pants);
+arrGoods(tshirts_men);
+arrGoods(jacket_men);
+arrGoods(hoodies_men);
+arrGoods(jeans_men);
+arrGoods(homclot_men);
+arrGoods(shoes_men);
+arrGoods(pants_men);
 //__________________________________Поиск кнопок из списка____________________________________________________________
 let allBtn = document.querySelectorAll('.category__text');
 //__________________________________Нахождение главной кнопки одежды_______________________________________________
@@ -50,13 +50,13 @@ btn__clothes.addEventListener('click', function(e){
 for(let btn of allBtn){
     btn.addEventListener('click', function func(e){
         // console.log(e.currentTarget);
-        ulBtn(btnPants, 'goods__block pants', 'dispNone', e);
-        ulBtn(btnJacket, 'goods__block jacket', 'dispNone', e);
-        ulBtn(btnHoodies, 'goods__block hoodies', 'dispNone', e);
-        ulBtn(btnJeans, 'goods__block jeans', 'dispNone', e);
-        ulBtn(btnHomclot, 'goods__block homclot', 'dispNone', e);
-        ulBtn(btnTshirts, 'goods__block tshirts', 'dispNone', e);
-        ulBtn(btnShoes, 'goods__block shoes', 'dispNone', e);
+        ulBtn(btnPants, 'goods__block pants_men', 'dispNone', e);
+        ulBtn(btnJacket, 'goods__block jacket_men', 'dispNone', e);
+        ulBtn(btnHoodies, 'goods__block hoodies_men', 'dispNone', e);
+        ulBtn(btnJeans, 'goods__block jeans_men', 'dispNone', e);
+        ulBtn(btnHomclot, 'goods__block homclot_men', 'dispNone', e);
+        ulBtn(btnTshirts, 'goods__block tshirts_men', 'dispNone', e);
+        ulBtn(btnShoes, 'goods__block shoes_men', 'dispNone', e);
     });
 }
 

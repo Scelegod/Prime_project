@@ -9,13 +9,13 @@ let btnShoes = document.querySelector('.btnShoes');
 //_____________________________________________________________________________________________________________________
 
 //__________________________________Поиск товаров по категория_________________________________________________________
-let tshirts = document.querySelectorAll('.tshirts');
-let jacket = document.querySelectorAll('.jacket');
-let hoodies = document.querySelectorAll('.hoodies');
-let jeans = document.querySelectorAll('.jeans');
-let homclot = document.querySelectorAll('.homclot');
-let shoes = document.querySelectorAll('.shoes');
-let pants = document.querySelectorAll('.pants');
+let tshirts = document.querySelectorAll('.tshirts_women');
+let jacket = document.querySelectorAll('.jacket_women');
+let hoodies = document.querySelectorAll('.hoodies_women');
+let jeans = document.querySelectorAll('.jeans_women');
+let homclot = document.querySelectorAll('.homclot_women');
+let shoes = document.querySelectorAll('.shoes_women');
+let pants = document.querySelectorAll('.pants_women');
 
 
 //__________________________________Добавление товаров в единный массив_______________________________________________
@@ -50,13 +50,13 @@ btn__clothes.addEventListener('click', function(e){
 for(let btn of allBtn){
     btn.addEventListener('click', function func(e){
         // console.log(e.currentTarget);
-        ulBtn(btnPants, 'goods__block pants', 'dispNone', e);
-        ulBtn(btnJacket, 'goods__block jacket', 'dispNone', e);
-        ulBtn(btnHoodies, 'goods__block hoodies', 'dispNone', e);
-        ulBtn(btnJeans, 'goods__block jeans', 'dispNone', e);
-        ulBtn(btnHomclot, 'goods__block homclot', 'dispNone', e);
-        ulBtn(btnTshirts, 'goods__block tshirts', 'dispNone', e);
-        ulBtn(btnShoes, 'goods__block shoes', 'dispNone', e);
+        ulBtn(btnPants, 'goods__block pants_women', 'dispNone', e);
+        ulBtn(btnJacket, 'goods__block jacket_women', 'dispNone', e);
+        ulBtn(btnHoodies, 'goods__block hoodies_women', 'dispNone', e);
+        ulBtn(btnJeans, 'goods__block jeans_women', 'dispNone', e);
+        ulBtn(btnHomclot, 'goods__block homclot_women', 'dispNone', e);
+        ulBtn(btnTshirts, 'goods__block tshirts_women', 'dispNone', e);
+        ulBtn(btnShoes, 'goods__block shoes_women', 'dispNone', e);
     });
 }
 

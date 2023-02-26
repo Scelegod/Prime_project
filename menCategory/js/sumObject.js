@@ -1,12 +1,12 @@
 
 //_______________________________________Суммирование товаров по категориям____________________________________________
-sumObject('shoes', 'number_shoes');
-sumObject('pants', 'number_pants');
-sumObject('jacket', 'number_jacket');
-sumObject('jeans', 'number_jeans');
-sumObject('hoodies', 'number_hoodies');
-sumObject('homclot', 'number_homclot');
-sumObject('tshirts', 'number_tshirts');
+sumObject('shoes_men', 'number_shoes');
+sumObject('pants_men', 'number_pants');
+sumObject('jacket_men', 'number_jacket');
+sumObject('jeans_men', 'number_jeans');
+sumObject('hoodies_men', 'number_hoodies');
+sumObject('homclot_men', 'number_homclot');
+sumObject('tshirts_men', 'number_tshirts');
 
 function sumObject(selector, span){
     let elem = document.querySelectorAll('.' + selector);
@@ -17,3 +17,4 @@ function sumObject(selector, span){
     }
     span2.textContent = sum;
 }
+

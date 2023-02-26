@@ -17,7 +17,6 @@ function calcGoodsPrice(){
         totalAmount += currentAmount;
     })
     sum__price__number.textContent = totalPrice;
-    
     basket__number.textContent = totalAmount;
     localStorage.setItem('basket__number', JSON.stringify(basket__number.textContent));
 }

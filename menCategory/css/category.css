@@ -255,7 +255,7 @@ body{
     color: #000000;
 
 }
-.men__all__goods, .women__all__goods{
+.men__all__goods, .women__all__goods, .all__goods{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
