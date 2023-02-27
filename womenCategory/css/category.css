@@ -20,7 +20,8 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-left: 405px;
-    margin-right: 504px;
+    /* margin-right: 504px; */
+    width: 1136px;
 }
 
 .header__menu__left_bar, .header__menu__right_bar{

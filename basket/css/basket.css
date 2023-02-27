@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     
 }
 /* header_______________________________________________________________________________ */
@@ -16,11 +16,10 @@ body{
 .header__menu{
     display: flex;
     flex-direction: row;
-    /* align-content: space-around; */
     justify-content: space-between;
     align-items: center;
     margin-left: 405px;
-    margin-right: 504px;
+    width: 1136px;
 }
 
 .header__menu__left_bar, .header__menu__right_bar{
@@ -29,7 +28,6 @@ body{
     gap: 30px;
 }
 .header__menu__text{
-    /* margin-right: -100px; */
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -40,11 +38,9 @@ body{
 }
 .header__menu__line{
     border: 1px solid #af8466;
-    /* transform: rotate(90deg); */
     height: 48px;
 }
 .header__menu__number{
-    /* margin-right: 100px; */
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -55,7 +51,6 @@ body{
 }
 
 .header__menu__shop, .header__menu__stocks{
-    /* margin-left: 100px; */
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;

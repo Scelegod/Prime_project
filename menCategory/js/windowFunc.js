@@ -5,10 +5,15 @@ let str2 = localStorage.getItem('arr');
         
 checkCart();
 document.addEventListener('DOMContentLoaded', () =>{
-    let number = localStorage.getItem('basket__number');
-    let number2 = JSON.parse(number);
     let basket__number = document.querySelector('.basket__number');
-    basket__number.textContent = number2;
+    if(localStorage.getItem('basket__number') == null){
+        basket__number.textContent = 0;
+    }else{
+        basket__number.textContent = JSON.parse(localStorage.getItem('basket__number'));
+    }
+    // let number = localStorage.getItem('basket__number');
+    // let number2 = JSON.parse(number);
+    // basket__number.textContent = number2;
 });
         //_____________________________Клик по странице сайта________________________________________________________________________
 window.addEventListener('click', function(event){
