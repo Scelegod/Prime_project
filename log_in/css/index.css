@@ -518,3 +518,67 @@
 .dropdown__link:hover{
     background-color: #946b4e;
 }
+
+/* _____________________________________________Адаптивка_____________________________________________ */
+@media (max-width : 1440px) {
+    .header__menu{
+        margin-left: 200px;
+        width: 1000px;
+    }
+    .screen{
+        margin-left: 130px;
+        width: 1206px;
+    }
+    .screen__menu{
+        margin-left: 60px;
+        width: 1030px;
+    }
+    .path{
+        margin-left: 190px;
+    }
+    .men_clothing__text, .basket__empty__text{
+        margin-left: 220px;
+    }
+    .goods__basket{
+        margin-left: 200px;
+        width: 1040px;
+    }
+    .making__order{
+        margin-left: 934px;
+    }
+    .footer__all{
+        margin-left: 190px;
+        width: 1000px;
+    }
+}
+@media (max-width : 1024px) {
+    .header__menu{
+        margin-left: 100px;
+        width: 800px;
+    }
+    .screen{
+        margin-left: 50px;
+        width: 930px;
+    }
+    .screen__menu{
+        margin-left: 40px;
+        width: 820px;
+    }
+    .path{
+        margin-left: 90px;
+    }
+    .men_clothing__text, .basket__empty__text{
+        margin-left: 120px;
+    }
+    .goods__basket{
+        margin-left: 100px;
+        width: 840px;
+    }
+    .making__order{
+        margin-left: 634px;
+    }
+    .footer__all{
+        margin-left: 90px;
+        width: 800px;
+    }
+}

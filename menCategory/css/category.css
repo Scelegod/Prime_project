@@ -518,3 +518,32 @@ body{
     display: flex;
     position: relative;
 }
+
+/* _____________________________________________Адаптивка_____________________________________________ */
+@media (max-width : 1440px) {
+    .header__menu{
+        margin-left: 200px;
+        width: 1000px;
+    }
+    .screen__menu{
+        margin-left: 190px;
+        width: 1030px;
+    }
+    .path{
+        margin-left: 190px;
+    }
+    .men_clothing__text, .basket__empty__text{
+        margin-left: 220px;
+    }
+    .all{
+        margin-left: 200px;
+    }
+    .all__goods{
+        margin-left: 474px;
+        /* width: 1040px; */
+    }
+    .footer__all{
+        margin-left: 190px;
+        width: 1000px;
+    }
+}
