@@ -449,7 +449,7 @@ body{
     margin-top: 42px;
     width: 1110px;
     margin-left: 405px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .goods__block__basket{
     display: flex;
