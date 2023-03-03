@@ -445,6 +445,7 @@
 }
 .social_networks__block{
     display: flex;
+    flex-direction: row;
     gap: 5px;
     align-items: center;
     color: white;
