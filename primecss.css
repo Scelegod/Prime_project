@@ -1,23 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;    
     
 }
+
 /* header_______________________________________________________________________________ */
 .header{
     height: 48px;
     width: 100%;
     background-color: #D7B399;
 }
+
 .header__menu{
     display: flex;
     flex-direction: row;
-    /* align-content: space-around; */
     justify-content: space-between;
     align-items: center;
-    margin-left: 405px;
-    margin-right: 504px;
+
+    width: 1011px;
+    /* margin-left: 405px;
+    margin-right: 504px; */
+
+    margin: 0 auto;
+
+    font-weight: 500;
 }
 
 .header__menu__left_bar, .header__menu__right_bar{
@@ -25,16 +35,17 @@
     align-items: center;
     gap: 30px;
 }
+
 .header__menu__text{
     /* margin-right: -100px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.03em;
     color: #FFFFFF;
 }
+
 .header__menu__line{
     border: 1px solid #af8466;
     /* transform: rotate(90deg); */
@@ -42,20 +53,20 @@
 }
 .header__menu__number{
     /* margin-right: 100px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
+    /* font-weight: 500; */
     font-size: 14px;
-    line-height: 17px;
+    line-height: 15px;
     letter-spacing: 0.03em;
     color: #FFFFFF;
 }
 
 .header__menu__shop, .header__menu__stocks{
     /* margin-left: 100px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
+    /* font-weight: 500; */
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 0.03em;
@@ -64,8 +75,10 @@
 /* ________________________________________________________________________________________ */
 
 .screen__menu{
-    margin-top: 50px;
-    margin-left: 405px;
+    /* margin-top: 50px; */
+    /* margin-left: 405px; */
+    
+    margin: 50px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,8 +101,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: 'Montserrat';
-    font-style: normal;
+
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -102,8 +116,8 @@
     gap: 15px;
 }
 .screen__menu__logo__text{
-    font-family: 'Montserrat';
-    font-style: normal;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -112,8 +126,8 @@
     color: #212121;
 }
 .right_bar__payment, .right_bar__delivery{
-    font-family: 'Montserrat';
-    font-style: normal;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -148,8 +162,8 @@
 .basket__number{
     /* position: absolute; */
     margin-left: -40px;
-    font-family: 'Montserrat';
-    font-style: normal;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -193,10 +207,17 @@
 }
 .menu__btn_women_btn, .menu__btn_men_btn{
     cursor: pointer;
-    background: white;
-    color: #212121;
+
+    background: none;
     border: none;
+
+    color: #212121;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+
     padding: 5px 10px;
+
     transition: background-color 0.3s ease-in-out;
 }
 .menu__btn_women_btn--active{
@@ -231,23 +252,32 @@
 /* _____________________________________slider_________________ */
 .slider{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+
     width: 1131px;
     /* border: 1px solid black; */
-    margin-left: 405px;
-    margin-top: 125px;
+    /* margin-left: 405px;
+    margin-top: 125px; */
+    margin: 125px auto;
     height: 515px;
 }
+
 .slider__text{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     margin-top: 35px;
+
     width: 570px;
     height: 224px;
     /* border: 1px solid red; */
-    font-family: 'Montserrat';
-    font-style: normal;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
 }
+
 .text__sale{
     font-weight: 400;
     font-size: 30px;
@@ -256,6 +286,7 @@
 
     color: #000000;
 }
+
 .text__discounts{
     font-weight: 700;
     font-size: 55px;
@@ -265,49 +296,52 @@
 
     color: #000000;
 }
+
 .button{
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 240px;
     height: 55px;
+
     background: #D7B399;
-    font-family: 'Montserrat';
-    font-style: normal;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-
     text-transform: uppercase;
     letter-spacing: 0.03em;
     color: #FFFFFF;
 }
-.slider{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-between;
-}
+
 .slider__product{
     /* border: 1px solid blue; */
     display: flex;
-    height: 377px;
     flex-direction: column;
     align-items: flex-end;
-    font-family: 'Montserrat';
-    font-style: normal;
+
+    height: 377px;
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
+
     font-weight: 700;
     text-transform: uppercase;
     
 }
+
 .product__price{
-    position: absolute;
     margin-top: 40px;
+
+    position: absolute;
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 14px;
 }
+
 .slider__product__old_price{
     /* position: absolute; */
     font-size: 24px;
@@ -317,6 +351,7 @@
 
     color: #000000;
 }
+
 .slider__product__new_price{
     /* position: absolute; */
     font-size: 42px;
@@ -325,6 +360,7 @@
     
     color: #D84033;
 }
+
 .slider__controls{
     display: flex;
     gap: 15px ;
@@ -332,11 +368,558 @@
     width: 205px;
     /* border: 1px solid red; */
 }
+
 .controls{
     height: 7px;
     width: 40px;
     background: #CECECE;
 }
+
 .controls__active{
     background: #D7B399;
+}
+
+/* __________________________________Бесплатная Доставка___________________________ */
+.free_shiping{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+
+    width: 100%;
+    height: 235px;
+    
+    padding-top: 80px;
+    margin-top: 70px;
+    background: #212121;
+    
+    
+}
+
+.free_shiping_price{
+    /* width: 600px; */
+    /* margin-left: 650px; */
+    /* padding-top: 80px; */
+    
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
+    height: 37px;
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.free_shiping_price__money{
+    font-weight: 300;
+}
+
+.free_shiping_gift{
+    /* width: 394px; */
+    /* margin-left: 750px; */
+    /* padding-top: 60px; */
+    
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
+    height: 26px;
+
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 26px;
+    
+    color: #FFFFFF;
+    
+}    
+
+
+
+/* __________________________________Мужская Коллекция___________________________ */
+.cloth_col{
+    display: flex;
+    height: 250px;
+}
+.cloth_col__men{
+    display: flex;
+    justify-content: flex-end;
+
+    width: 50%;
+    /* height: 250px; */
+
+    padding-right: 15px;
+    /* padding-top: 60px; */
+
+    background: #F9F6F1;
+}
+
+.cloth_col__content{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    width: 329px;
+
+    margin-top: 60px;
+}
+
+.cloth_col__men_preset, .cloth_col__women__preset{
+    /* position: flex; */
+    width: 190px;
+    height: 171px;
+    /* margin-left: 755px; */
+    margin-top: 79px;
+
+}
+
+.cloth_col__text{
+    /* position: absolute;
+    width: 366px;
+    height: 22px;
+    left: 426px;
+    top: 1075px;
+     */
+    /* font-family: 'Montserrat'; */
+    /* font-style: normal; */
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    
+    color: #000000;
+}
+
+/* .cloth_col__men__variety{
+    position: absolute;
+    width: 264px;
+    height: 15px;
+    left: 426px;
+    top: 1120px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    
+    color: #000000;
+} */
+.cloth_col__text__category{
+    font-weight: 700;
+}
+
+.cloth_col__rectangle{
+    /* position: absolute;
+    height: 30px;
+    left: 425px;
+    top: 1180px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    width: 80px;
+    height: 30px;
+
+    background: #D7B399;
+
+    color: #FFFFFF;
+    /* text-align: center; */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.cloth_col__line{
+    border: 0.5px solid rgba(0, 0, 0, 0.44);
+    height: 250px;
+    /* rotate: 90deg; */
+}
+/* __________________________________Женская Коллекция___________________________ */
+.cloth_col__women{
+    /* border: 1px black solid; */
+    display: flex;
+    /* flex-direction: row-reverse; */
+
+    width: 50%;
+
+    padding-left: 35px;
+    /* height: 250px; */
+    /* left: 960px; */
+    /* top: 1013px; */
+
+    background: #F4F4F4;
+}
+
+/* .cloth_col__women__preset{ */
+    /* position: flex; */
+    /* width: 190px; */
+    /* height: 171px; */
+    /* margin-left: 460px; */
+    /* margin-top: 79px; */
+
+/* } */
+
+/* .cloth_col__women__text{
+    position: absolute;
+    width: 366px;
+    height: 22px;
+    left: 100px;
+    top: 60px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+
+    color: #000000;
+} */
+
+/* .cloth_col__women__variety{
+    position: absolute;
+    width: 229px;
+    height: 15px;
+    left: 100px;
+    top: 105px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #000000;
+} */
+
+/* .cloth_col__women__rectangle{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    left: 100px;
+    top: 166px;
+    background: #D7B399;
+    color: #FFFFFF;
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+} */
+
+.cloth_col__line-botom{
+    border: 0.5px solid rgba(0, 0, 0, 0.44);
+    width: 64px;
+    margin: 0 auto;
+}
+
+/* new_models */
+.new_models, .discount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.new_models__text, .discount__text{
+    display: flex;
+    flex-direction: row;
+    height: 44px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    
+    color: #212121;
+}
+
+.new_models__all, .discount__all{
+    display: flex;
+    margin-top: 56px;
+    gap: 30px;
+}
+
+
+.new_models__block, .discount__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 255px;
+    height: 422px;
+}
+
+.discount__block{
+    height: 446px;
+}
+
+.block__text_goods{
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    color: #737373;
+}
+
+.block__text_categories{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    color: #737373;
+}
+.discount__items__oldprice{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-decoration-line: line-through;
+    text-transform: uppercase;
+    color: #000000;
+}
+.block__text_price_ruble{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.discount-price{
+    color: #D84033;
+}
+
+.img__btnBasket{
+    display: flex;
+    position: relative;
+}
+/* Кнопка добавления в корзину */
+.btnBasket{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    background-color: #af8466;
+    color: white;
+    transform: translateY(calc(40px));
+    z-index: 0;
+    transition: all 200ms;
+
+}
+
+.btnBasket_hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+
+    font-size: 16px;
+    color: white;
+
+    height: 40px;
+    width: 100%;
+
+    background-color: #af8466;
+    z-index: 3;
+    
+    cursor: pointer;
+    
+    opacity: 0.9;
+    transform: translateY(calc(1px));
+    transition: all 400ms;
+    
+}
+
+/* .new_models__block, */
+.new_models__button, .discount__items__button{
+    /* font-family: 'Montserrat'; */
+    /* text-align: center; */
+    /* font-style: normal; */
+    margin-top: 56px;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 55px;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    
+    width: 220px;
+    height: 55px;
+    
+    background: #D7B399;
+}
+
+
+/* ________________________________________Скидки и подарки_______________________________ */
+
+.subcribe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 180px;
+    margin-top: 225px;
+
+    background: #212121
+}
+
+.subcribe__text{
+    width: 575px;
+    height: 37px;
+    
+    margin-right: 60px;
+    
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.02em;
+    
+    color: #ffffff;
+}
+
+.subcribe__email{
+    width: 255px;
+    height: 40px;
+
+    padding: 13px 20px;
+    margin-right: 35px;
+    
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8D8D8D;
+    letter-spacing: 0.02em;
+
+    border: none;    
+    background: #F9F6F1;
+}
+
+.subcribe__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 185px;
+    height: 40px;
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+
+    background: #D7B399;
+    color: #FFFFFF;
+}
+
+/* footer_____________________________________________________________________ */
+.footer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    background: #212121;
+    width: 100%;
+    height: 311px;
+}
+
+.footer__all{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* gap: ; */
+    width: 1176px;
+    margin-top: 79px;
+    margin-left: 379px;
+    /* margin-right: 504px; */
+    /* border: 1px solid blue; */
+    
+}
+
+.footer__all__logo__text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer__all__logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* border: 1px solid red; */
+}
+.footer__all__worked, .footer__all__categories, .footer__all__social_networks{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.teams, .categories, .social_networks{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 12px;
+    /* display: flex;
+    align-items: center; */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.worker, .men, .women{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #CBCFD4;
+}
+.social_networks__block{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: white;
+}
+.url{
+    text-decoration: none;
+    color: #737373;
+}
+.url2{
+    text-decoration: none;
+}
+.url3{
+    text-decoration: none;
+    color: white;
 }
