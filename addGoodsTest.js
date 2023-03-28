@@ -92,8 +92,8 @@ for(let elem in allGoodsTest){
             div2.appendChild(div3);
             div.appendChild(p);
             div.appendChild(p2);
-            div.appendChild(p3);
             div.appendChild(span2);
+            div.appendChild(p3);
             span2.prepend(span);
         }
     }
@@ -188,8 +188,8 @@ for(let elem in allGoodsTest){
             div2.appendChild(div3);
             div.appendChild(p);
             div.appendChild(p2);
-            div.appendChild(p3);
             div.appendChild(span2);
+            div.appendChild(p3);
             span2.prepend(span);
         }
         }
@@ -286,8 +286,8 @@ for(let elem in allGoodsTest){
             div2.appendChild(div3);
             div.appendChild(p);
             div.appendChild(p2);
-            div.appendChild(p3);
             div.appendChild(span2);
+            div.appendChild(p3);
             span2.prepend(span);
         }
 

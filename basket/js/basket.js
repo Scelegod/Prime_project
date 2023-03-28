@@ -1,7 +1,7 @@
 "use strict"
 
 function saveCartToLs(){
-    localStorage.setItem('cart', JSON.stringify(cartStorage))
+    localStorage.setItem('cart', JSON.stringify(cartData))
 }
 let str = localStorage.getItem('arr');
 let goodsInfo2 = JSON.parse(str);

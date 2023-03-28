@@ -1,16 +1,17 @@
 
-let goodsInfo = {};
-let goodsInfo2 = [];
-let str2 = localStorage.getItem('arr');
+// let goodsInfo = {};
+// let goodsInfo2 = [];
+// let str2 = localStorage.getItem('arr');
         
-checkCart();
+// checkCart();
 document.addEventListener('DOMContentLoaded', () =>{
-    let basket__number = document.querySelector('.basket__number');
-    if(localStorage.getItem('basket__number') == null){
-        basket__number.textContent = 0;
-    }else{
-        basket__number.textContent = JSON.parse(localStorage.getItem('basket__number'));
-    }
+    // let basket__number = document.querySelector('.basket__number');
+
+    // if(localStorage.getItem('basket__number') == null){
+    //     basket__number.textContent = 0;
+    // }else{
+    //     basket__number.textContent = JSON.parse(localStorage.getItem('basket__number'));
+    // }
     // let number = localStorage.getItem('basket__number');
     // let number2 = JSON.parse(number);
     // basket__number.textContent = number2;
@@ -112,14 +113,16 @@ window.addEventListener('click', function(event){
 });
 //_______________________________Функция отслежиния при наведении товара___________________________________________________________________
 window.addEventListener('mouseover', function func(event){
+    if(event.type == 'click'){
+        if(event.target.closest('.goods__block')){
+            window.removeEventListener('mouseover', func);
+            btnBasket.setAttribute('class', 'btnBasket');
+        }
+    }
     if(event.target.closest('.goods__block')){
         let goods__block = event.target.closest('.goods__block');
         let btnBasket = goods__block.querySelector('.btnBasket');
         btnBasket.setAttribute('class', 'btnBasket_hover');
-    }
-    if(event.type == 'click'){
-        window.removeEventListener('mouseover', func);
-        btnBasket.setAttribute('class', 'btnBasket');
     }
 });
 //_______________________________Функция отслежиния при потери товара___________________________________________________________________
@@ -131,9 +134,9 @@ window.addEventListener('mouseout', function func2(event){
         btnBasket.setAttribute('class', 'btnBasket');
     }
 });
-    function checkCart(){
-        //Проверяю наличие корзины в localStorage
-        if(localStorage.getItem('arr') != null){
-            goodsInfo2 = JSON.parse(localStorage.getItem('arr'));
-        }
-    }
+    // function checkCart(){
+    //     //Проверяю наличие корзины в localStorage
+    //     if(localStorage.getItem('arr') != null){
+    //         goodsInfo2 = JSON.parse(localStorage.getItem('arr'));
+    //     }
+    // }
