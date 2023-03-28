@@ -32,7 +32,7 @@ window.addEventListener('click', function(event){
 
         let itemInCart = goods__basket.querySelector('[data-id="' + goodsInfo.id + '"]');
         if(itemInCart){
-            // console.log(itemInCart.dataset.id);
+            console.log(itemInCart.dataset.id);
             counterElem = itemInCart.querySelector('.basket__amoynt__number');
             // counterElem.textContent = +counterElem.textContent + +goodsInfo.counter;
             for(let i of goodsInfo2){
@@ -64,14 +64,51 @@ window.addEventListener('click', function(event){
         localStorage.setItem('arr', JSON.stringify(goodsInfo2));
         let str = localStorage.getItem('arr');
         goodsInfo2 = JSON.parse(str);
-
+    
         let baskeNumber = 0;
         let basket__number = document.querySelector('.basket__number');
         for(let counter of goodsInfo2){
-            baskeNumber = baskeNumber + +counter.counter; 
+                baskeNumber = baskeNumber + +counter.counter; 
             basket__number.textContent = baskeNumber;
         }
     }
+    
+    // if(event.target.closest('.btnBasket_hover')){
+    //     let goods__block = event.target.closest('.goods__block');
+    //     goodsInfo = {
+    //         id: goods__block.dataset.id,
+    //         imgSrc: goods__block.querySelector('.block__img').getAttribute('src'),
+    //         title: goods__block.querySelector('.block__text_goods').textContent,
+    //         categories: goods__block.querySelector('.block__text_categories').textContent,
+    //         price: goods__block.querySelector('.block__text_price').textContent,
+    //         counter: '1'
+    //     }
+        
+    //     let itemInCart = goods__block.querySelector('[data-id="' + goodsInfo.id + '"]');
+    //     console.log(itemInCart);
+    //     if(itemInCart){
+    //         counterElem = itemInCart;
+    //         counterElem = +counterElem + +goodsInfo.counter;
+    //         for(let i of goodsInfo2){
+    //             if(itemInCart.id == i.id){
+    //                 i.counter++;
+    //             }
+    //         }
+
+    //         let itemInCart = [
+    //             goodsInfo.id,
+    //             goodsInfo.imgSrc,
+    //             goodsInfo.categories,
+    //             goodsInfo.title,
+    //             goodsInfo.counter,
+    //             goodsInfo.price
+    //         ]
+    //         console.log(goodsInfo2)
+
+    //     }
+    //     // else{
+    //     // }
+    // }
 });
 //_______________________________Функция отслежиния при наведении товара___________________________________________________________________
 window.addEventListener('mouseover', function func(event){

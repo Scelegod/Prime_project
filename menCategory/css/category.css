@@ -243,7 +243,7 @@ body{
     margin-left: 21px;
     margin-top: 35px;
 }
-.category__number{
+.category__number, .category__number_new, .category__number_dis{
     /* margin-left: 30px; */
     padding:  0 10px  0 10px;
     font-family: 'Montserrat';
@@ -295,7 +295,7 @@ body{
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    text-align: right;
+    text-align: center;
     letter-spacing: 0.02em;
     text-transform: uppercase;
 
@@ -312,6 +312,28 @@ body{
     color: #000000;
 }
 
+.block__text_price_ruble {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.block__text_price_ruble.discount-price {
+    color: #D84033;
+}
+
+.discount__items__oldprice {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-decoration-line: line-through;
+    text-transform: uppercase;
+    color: #000000;
+}
 /* ___________________________________________________Выпадающий список_____________________________________ */
 .list-reset{
     margin: 0;

@@ -1,11 +1,12 @@
+console.log(window);
 //_______________________________Функция отслежиния при наведении товара___________________________________________________________________
 window.addEventListener('mouseover', function func(event){
-    if(event.target.closest('.new_models__block')){
+    if(event.target.closest('.goods__block')){
         let goods__block = event.target.closest('.new_models__block');
         let btnBasket = goods__block.querySelector('.btnBasket');
         btnBasket.setAttribute('class', 'btnBasket_hover');
     }
-    if(event.target.closest('.discount__block')){
+    if(event.target.closest('.goods__block')){
         let goods__block = event.target.closest('.discount__block');
         let btnBasket = goods__block.querySelector('.btnBasket');
         btnBasket.setAttribute('class', 'btnBasket_hover');

@@ -315,6 +315,28 @@ body{
     color: #000000;
 }
 
+.block__text_price_ruble {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.block__text_price_ruble.discount-price {
+    color: #D84033;
+}
+
+.discount__items__oldprice {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-decoration-line: line-through;
+    text-transform: uppercase;
+    color: #000000;
+}
 /* ___________________________________________________Выпадающий список_____________________________________ */
 .list-reset{
     margin: 0;
