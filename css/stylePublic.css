@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;    
+    
+}
+
+/* header_______________________________________________________________________________ */
+.header{
+    height: 48px;
+    width: 100%;
+
+    background-color: #D7B399;
+}
+
+.header__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1011px;
+
+    margin: 0 auto;
+
+    font-weight: 500;
+}
+
+.header__menu__left_bar, .header__menu__right_bar{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header__menu__text{
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.header__menu__line{
+    border: 1px solid #af8466;
+    height: 48px;
+}
+.header__menu__number{
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.header__menu__shop, .header__menu__stocks{
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+/* ________________________________________________________________________________________ */
+
+.screen__menu{
+    margin: 50px auto;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 1136px;
+    
+    height: 40px;
+    
+    font-weight: 500;
+    
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+.screen__menu__left_bar{
+    display: flex;
+    gap: 20px;
+}
+
+.left_bar__men, .left_bar__women{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.screen__menu__logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.screen__menu__logo__text{
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.screen__menu__right_bar{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    font-weight: 500;
+}
+
+.right__bar__basket{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.basket__first_part{
+    margin-right: -20px;
+    width: 13px;
+    height: 13px;
+    background: #D7B399;
+    transform: rotate(-45deg);
+}
+
+.basket__second_part{
+    width: 33px;
+    height: 15px;
+    background: #D7B399;
+}
+
+.basket__number{
+    margin-left: -40px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.to_login, .to_basket{
+    text-decoration: none;
+    color: #212121;
+}
+
+.url{
+    text-decoration: none;
+    color: #737373;
+}
+
+.url2{
+    text-decoration: none;
+}
+
+.url3{
+    text-decoration: none;
+    color: white;
+}
+
+.list-reset{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu__item:not(:last-child){
+    margin-right: 30px;
+}
+
+.menu__item{
+    position: relative;
+}
+
+.menu__btn_women_btn, .menu__btn_men_btn{
+    cursor: pointer;
+
+    background: none;
+    border: none;
+
+    color: #212121;
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 5px 10px;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu__btn_women_btn--active{
+    background-color: #cba286;
+}
+
+.menu{
+    display: inline-flex;
+    align-items: center;
+}
+
+/* footer_____________________________________________________________________ */
+.footer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    background: #212121;
+    width: 100%;
+}
+
+.footer__all{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* gap: ; */
+    width: 1176px;
+    margin-top: 79px;
+    margin-left: 379px;
+    /* margin-right: 504px; */
+    /* border: 1px solid blue; */
+    
+}
+
+.footer__all__logo__text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer__all__logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* border: 1px solid red; */
+}
+.footer__all__worked, .footer__all__categories, .footer__all__social_networks{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.teams, .categories, .social_networks{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 12px;
+    /* display: flex;
+    align-items: center; */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.worker, .men, .women{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #CBCFD4;
+}
+.social_networks__block{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: white;
+}
+

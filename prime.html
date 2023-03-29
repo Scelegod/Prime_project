@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/primecss.css">
-    <!-- Option 1: Include in HTML -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--Get your own code at fontawesome.com-->
+    <link rel="stylesheet" href="./css/stylePublic.css">
+    <link rel="stylesheet" href="./css/primecss.css">
     <title>Главная страница</title>
 </head>
 <body>
@@ -36,7 +31,7 @@
                 <ul class="menu list-reset">
                     <li class="menu__item">
                         <a href="./menCategory/menCategory.html"><button class="menu__btn_men_btn">Мужская одежда<!--<i class="bi bi-caret-down-fill">--></i></button></a>
-                        <div class="dropdown">
+                        <!-- <div class="dropdown">
                             <ul class="dropdown__list list-reset">
                                 <li class="dropdown__item">
                                     <a href="#" class="dropdown__link">Брюки</a>
@@ -60,11 +55,11 @@
                                     <a href="#" class="dropdown__link">Обувь</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </li>
                     <li class="menu__item">
                     <a href="./womenCategory/womenCategory.html"><button class="menu__btn_women_btn">Женская одежда<!--<i class="bi bi-caret-down-fill">--></i></button></a>
-                        <div class="dropdown">
+                        <!-- <div class="dropdown">
                             <ul class="dropdown__list list-reset">
                                 <li class="dropdown__item">
                                     <a href="#" class="dropdown__link">Брюки</a>
@@ -88,24 +83,26 @@
                                     <a href="#" class="dropdown__link">Обувь</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </li>
                 </ul>
             </div>
-            <a href="/prime.html" class="url2"><div class="screen__menu__logo">
-                <img src="/assets/img/Frame.png">
-                <p class="screen__menu__logo__text">the loop</p>
-            </div></a>
+            <a href="/prime.html" class="url2">
+                <div class="screen__menu__logo">
+                    <img src="/assets/img/Frame.png">
+                    <p class="screen__menu__logo__text">the loop</p>
+                </div>
+            </a>
             <div class="screen__menu__right_bar">
                 <p class="right_bar__payment">Оплата</p>
                 <p class="right_bar__delivery">Доставка</p>
                 <div class="right__bar__basket">
-                    <a href="/basket/basket.html" class="to_basket"><i class="bi bi-basket2-fill"></i></a>
+                    <a href="/basket/basket.html" class="to_basket"><img src="./icons/Basket.svg" alt="basket"></a>
                     <div class="basket__first_part"></div>
                     <div class="basket__second_part"></div>
                     <p class="basket__number">0</p>
                 </div>
-                <a href="/log_in/index.html" class="to_login"><i class="bi bi-person-fill"></i></a>
+                <a href="/log_in/index.html" class="to_login"><img src="./icons/Login.svg" alt="Login"></a>
             </div>
         </div>
     </div>
@@ -143,7 +140,6 @@
         <div class="cloth_col__men">
             <div class="cloth_col__content">
                 <p class="cloth_col__text"><span class="cloth_col__text__category">МУЖСКАЯ</span> КОЛЛЕКЦИЯ</p>
-                <!-- <p class="cloth_col__men__variety">Обувь, полуверы, костюмы</p> -->
                 <a class="cloth_col__rectangle" href="./menCategory/menCategory.html"><img src="./assets/icons/Arrow.svg" alt="arrow"></a>
             </div>
             <img class="cloth_col__men_preset" src="./assets/img/men_preset.png">
@@ -152,7 +148,6 @@
         <div class="cloth_col__women">
             <div class="cloth_col__content">
                 <p class="cloth_col__text"><span class="cloth_col__text__category">ЖЕНСКАЯ</span> КОЛЛЕКЦИЯ</p>
-                <!-- <p class="cloth_col__women__variety">Обувь, полуверы, костюмы</p> -->
                 <a class="cloth_col__rectangle" href="./womenCategory/womenCategory.html"><img src="./assets/icons/Arrow.svg" alt="arrow"></a>
             </div>
             <img class="cloth_col__women__preset" src="./assets/img/women_preset.png">
@@ -168,7 +163,6 @@
         <div class="new_models__all">
             <!-- Новые модели одежды -->
         </div>
-        <a class="new_models__button" href="#">ВСЕ МОДЕЛИ</a>
     </div>
 
     <div class="subcribe">
@@ -183,7 +177,6 @@
         <div class="discount__all">
 
         </div>
-        <a class="discount__items__button" href="#">ВСЕ МОДЕЛИ</a>
     </div>
 
     <div class="footer">
@@ -211,35 +204,35 @@
             <div class="footer__all__social_networks">
                 <p class="social_networks">Соц. сети:</p>
                 <div class="social_networks__block">
-                    <i class="bi bi-github"></i>
+                    <img src="./icons/GitHub.svg" alt="GitHub">
                     <a class="url3" href="https://github.com/Scelegod"><div class="p soc_net">Scelegod</div></a>
                 </div>
                 <div class="social_networks__block">
-                    <i class="bi bi-github" ></i>
+                    <img src="./icons/GitHub.svg" alt="GitHub">
                     <a class="url3" href="https://github.com/BerezutskiyIvan"><div class="p soc_net">BBgp</div></a>
                 </div>
                 <div class="social_networks__block">
-                    <i class="bi bi-github" ></i>
+                    <img src="./icons/GitHub.svg" alt="GitHub">
                     <a class="url3" href="https://github.com/WHSEK"><div class="p soc_net">Egor Krylov</div></a>
                 </div>
                 <div class="social_networks__block">
-                    <i class="bi bi-github" ></i>
+                    <img src="./icons/GitHub.svg" alt="GitHub">
                     <a class="url3" href="https://github.com/IgorEpifanov"><div class="p soc_net">IgorEpifanov</div></a>
                 </div>
                 <div class="social_networks__block">
-                    <i class="bi bi-github" ></i>
+                    <img src="./icons/GitHub.svg" alt="GitHub">
                     <a class="url3" href="https://github.com/PolinaTerentevskaya"><div class="p soc_net">PolinaTerentevskaya</div></a>
                 </div>
                 <div class="social_networks__block">
-                    <i class="bi bi-github" ></i>
+                    <img src="./icons/GitHub.svg" alt="GitHub">
                     <a class="url3" href="https://github.com/Raychel01"><div class="p soc_net">Raychel01</div></a>
                 </div>
                 <div class="social_networks__block">
-                    <i class="bi bi-github" ></i>
+                    <img src="./icons/GitHub.svg" alt="GitHub">
                     <a class="url3" href="https://github.com/PolischukDmitriy"><div class="p soc_net">PolischukDmitriy</div></a>
                 </div>
                 <div class="social_networks__block">
-                    <i class="bi bi-github" ></i>
+                    <img src="./icons/GitHub.svg" alt="GitHub">
                     <a class="url3" href="#"><div class="p soc_net">worker</div></a>
                 </div>
             </div>

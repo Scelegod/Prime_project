@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+
+/* ___________________________________________________Выпадающий список_____________________________________ */
+.dropdown{
+    /* display: none; */
+    position: absolute;
+    left: 0;
+    background-color:#D7B399;
+    top: 100%;
+    width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility;
+}
+.dropdown--active{
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown__link{
+    color: #212121;
+    padding: 10px 10px;
+    display: block;
+    width: 100%;
+    /* text-decoration: none; */
+}
+.dropdown__link:hover{
+    background-color: #946b4e;
+}
+
+/* _____________________________________slider_________________ */
+.slider{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+
+    width: 1131px;
+
+    margin: 125px auto;
+
+    height: 515px;
+}
+
+.slider__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-top: 35px;
+
+    width: 570px;
+    height: 224px;
+}
+
+.text__sale{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+
+    color: #000000;
+}
+
+.text__discounts{
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 67px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 240px;
+    height: 55px;
+
+    background: #D7B399;
+    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+}
+
+.slider__product{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    height: 377px;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+.product__price{
+    margin-top: 40px;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+}
+
+.slider__product__old_price{
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    text-decoration-line: line-through;
+
+    color: #000000;
+}
+
+.slider__product__new_price{
+    font-size: 42px;
+    line-height: 51px;
+    letter-spacing: 0.02em;
+    
+    color: #D84033;
+}
+
+.slider__controls{
+    display: flex;
+    gap: 15px ;
+    height: 7px;
+    width: 205px;
+}
+
+.controls{
+    height: 7px;
+    width: 40px;
+    background: #CECECE;
+}
+
+.controls__active{
+    background: #D7B399;
+}
+
+/* __________________________________Бесплатная Доставка___________________________ */
+.free_shiping{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+
+    width: 100%;
+    height: 235px;
+    
+    padding-top: 80px;
+    margin-top: 70px;
+    background: #212121;
+}
+
+.free_shiping_price{
+    height: 37px;
+    
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.free_shiping_price__money{
+    font-weight: 400;
+}
+
+.free_shiping_gift{
+    height: 26px;
+
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 26px;
+    
+    color: #FFFFFF;
+}    
+
+
+
+/* __________________________________Мужская Коллекция___________________________ */
+.cloth_col{
+    display: flex;
+    height: 250px;
+}
+.cloth_col__men{
+    display: flex;
+    justify-content: flex-end;
+
+    width: 50%;
+    /* height: 250px; */
+
+    padding-right: 15px;
+    /* padding-top: 60px; */
+
+    background: #F9F6F1;
+}
+
+.cloth_col__content{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    width: 329px;
+
+    margin-top: 60px;
+}
+
+.cloth_col__men_preset, .cloth_col__women__preset{
+    width: 190px;
+    height: 171px;
+
+    margin-top: 79px;
+
+}
+
+.cloth_col__text{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    
+    color: #000000;
+}
+
+.cloth_col__text__category{
+    font-weight: 700;
+}
+
+.cloth_col__rectangle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    width: 80px;
+    height: 30px;
+
+    background: #D7B399;
+
+    color: #FFFFFF;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.cloth_col__line{
+    border: 0.5px solid rgba(0, 0, 0, 0.44);
+    height: 250px;
+    /* rotate: 90deg; */
+}
+/* __________________________________Женская Коллекция___________________________ */
+.cloth_col__women{
+    display: flex;
+
+    width: 50%;
+
+    padding-left: 35px;
+
+    background: #F4F4F4;
+}
+
+.cloth_col__line-botom{
+    border: 0.5px solid rgba(0, 0, 0, 0.44);
+    width: 64px;
+    margin: 0 auto;
+}
+
+/* new_models */
+.new_models, .discount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    margin-top: 50px;
+}
+
+.new_models__text, .discount__text{
+    display: flex;
+    flex-direction: row;
+    height: 44px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    
+    color: #212121;
+}
+
+.new_models__all, .discount__all{
+    display: flex;
+    margin-top: 56px;
+    gap: 30px;
+}
+
+
+.new_models__block, .discount__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 255px;
+    height: 422px;
+}
+
+.discount__block{
+    height: 446px;
+}
+
+.block__text_goods{
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    color: #737373;
+}
+
+.block__text_categories{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    color: #737373;
+}
+
+.discount__items__oldprice{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-decoration-line: line-through;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.block__text_price_ruble{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.discount-price{
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    font-size: 20px;
+    color: #D84033;
+}
+
+.img__btnBasket{
+    display: flex;
+    position: relative;
+}
+/* Кнопка добавления в корзину */
+.btnBasket{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    background-color: #af8466;
+    color: white;
+    transform: translateY(calc(40px));
+    z-index: 0;
+    transition: all 200ms;
+
+}
+
+.btnBasket_hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+
+    font-size: 16px;
+    color: white;
+
+    height: 40px;
+    width: 100%;
+
+    background-color: #af8466;
+    z-index: 3;
+    
+    cursor: pointer;
+    
+    opacity: 0.9;
+    transform: translateY(calc(1px));
+    transition: all 400ms;
+    
+}
+
+/* .new_models__block, */
+.new_models__button, .discount__items__button{
+    margin-top: 56px;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 55px;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    
+    width: 220px;
+    height: 55px;
+    
+    background: #D7B399;
+}
+
+
+/* ________________________________________Скидки и подарки_______________________________ */
+
+.subcribe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 180px;
+    margin-top: 225px;
+
+    background: #212121
+}
+
+.subcribe__text{
+    width: 575px;
+    height: 37px;
+    
+    margin-right: 60px;
+    
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.02em;
+    
+    color: #ffffff;
+}
+
+.subcribe__email{
+    width: 255px;
+    height: 40px;
+
+    padding: 13px 20px;
+    margin-right: 35px;
+    
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8D8D8D;
+    letter-spacing: 0.02em;
+
+    border: none;    
+    background: #F9F6F1;
+}
+
+.subcribe__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 185px;
+    height: 40px;
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+
+    background: #D7B399;
+    color: #FFFFFF;
+}
+
