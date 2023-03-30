@@ -34,6 +34,17 @@
     gap: 30px;
 }
 
+.menu__burger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.menu__burger__line{
+    width: 40px;
+    border: 1px solid #D7B399;
+}
+
 .header__menu__text{
     font-size: 14px;
     line-height: 17px;
@@ -295,5 +306,72 @@
 
     .screen__menu{
         width: 900px;
+    }
+
+}
+
+@media (max-width: 768px){
+    .header__menu{
+        width: 700px;
+    }
+
+    .menu__burger{
+        display: flex;
+        height: 46px;
+    }
+    
+    .screen__menu {
+        width: 700px;
+    }
+    
+    .menu, .right_bar__payment, .right_bar__delivery{
+        display: none;
+    }
+}
+
+@media (max-width: 425px){
+    .header, .header__menu, .header__menu__left_bar, .header__menu__right_bar, .header__menu__line{
+        height: 38px;
+    }
+    
+    .header__menu{
+        width: 400px;
+    }
+
+    .header__menu__left_bar, .header__menu__right_bar{
+        gap: 10px;
+    }
+
+    .header__menu__text{
+        font-size: 12px;
+    }
+
+    .header__menu__number{
+        font-size: 10px;
+    }
+
+    .header__menu__shop, .header__menu__stocks{
+        font-size: 11px;
+    }
+
+    .menu__burger{
+        display: flex;
+        height: 46px;
+    }
+    
+    .screen__menu {
+        width: 400px;
+        margin: 30px auto;
+    }
+    
+    .menu, .right_bar__payment, .right_bar__delivery{
+        display: none;
+    }
+
+
+    .footer__all{
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }

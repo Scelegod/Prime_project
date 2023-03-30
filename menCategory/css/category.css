@@ -19,6 +19,7 @@ body{
     color: #737373;
 }
 
+
 .men_clothing__text, .women_clothing__text, .basket__empty__text{
     margin-top: 21px;
     margin-left: 405px;
@@ -31,7 +32,7 @@ body{
 
 .line{
     border: 1px solid #8D8D8D;
-
+    
     width: 99.92%;
 
     margin-top: 33px;
@@ -39,6 +40,7 @@ body{
 
 .all{
     display: flex;
+    align-items: flex-end;
     gap: 20px;
 
     width: 1110px;
@@ -58,6 +60,11 @@ body{
     letter-spacing: 0.02em;
 
     color: #737373;
+}
+
+#all__img{
+    width: 825px;
+    height: 349px;
 }
 
 .ul__catigory{
@@ -295,24 +302,72 @@ body{
     }
 
     .all__goods{
-        margin-left: 484px;
+        margin-left: 438px;
     }
 }
 
 @media (max-width : 1024px){
-    .header__menu{
-        width: 900px;
-    }
-
     .all{
         width: auto;
     }
 
     #all__img{
         width: 740px;
+        margin: 0 auto;
     }
 
     .all__goods{
         margin: 0 auto;
+    }
+
+    .path, .men_clothing__text, .women_clothing__text{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width : 768px){
+
+    .all__ul{
+        display: none;
+    }
+
+    .all__goods{
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width : 425px){
+    .all__goods{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    #all__img{
+        width: 400px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .men__all__goods, .all__goods{
+        justify-content: space-around;
+        gap: 5px;
+    }
+
+    .path{
+        margin-top: 0;
+        font-size: 14px;
+    }
+
+    .men_clothing__text, .women_clothing__text, .basket__empty__text{
+        font-size: 22px;
+    }
+
+    .new_models, .discount, .goods__block{
+        width: 150px;
+    }
+    .block__img{
+        width: 178px;
+        height: 240px;
     }
 }
