@@ -1,337 +1,41 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
-/* header_______________________________________________________________________________ */
 body{ 
     background: linear-gradient(white, rgb(206, 252, 255));
 }
-.header{
-    height: 48px;
-    width: 100%;
-    background-color: #D7B399;
-}
-.header__menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 405px;
-    width: 1136px;
-}
-
-.header__menu__left_bar, .header__menu__right_bar{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-.header__menu__text{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-}
-.header__menu__line{
-    border: 1px solid #af8466;
-    height: 48px;
-}
-.header__menu__number{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-}
-
-.header__menu__shop, .header__menu__stocks{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-}
-/* ________________________________________________________________________________________ */
-
-.screen__menu{
-    margin-top: 50px;
-    margin-left: 405px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1136px;
-    height: 40px;
-    /* border: 1px solid red; */
-}
-.bi-caret-down-fill{
-    margin-left: 3px;
-    color: black;
-    font-size: 10px;
-}
-.screen__menu__left_bar{
-    display: flex;
-    /* align-items: center; */
-    gap: 20px;
-}
-.left_bar__men, .left_bar__women{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.03em;
-    color: #212121;
-}
-.screen__menu__logo{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.screen__menu__logo__text{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #212121;
-}
-.right_bar__payment, .right_bar__delivery{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.03em;
-    color: #212121;
-}
-.screen__menu__right_bar{
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-.bi-basket2-fill, .bi-person-fill{
-    font-size: 28px;
-}
-.right__bar__basket{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.basket__first_part{
-    margin-right: -20px;
-    width: 13px;
-    height: 13px;
-    background: #D7B399;
-    transform: rotate(-45deg);
-}
-.basket__second_part{
-    width: 33px;
-    height: 15px;
-    background: #D7B399;
-}
-.basket__number{
-    /* position: absolute; */
-    margin-left: -40px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-}
-.to_login, .to_basket{
-    text-decoration: none;
-    color: #212121;
-}
+/* path */
 .path{
     display: flex;
     justify-content: space-around;
-    width: 244px;
+
+    width: 200px;
+
     margin-top: 74px;
     margin-left: 405px;
     
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
     color: #737373;
 }
-.men_clothing__text, .basket__empty__text{
+.path__basket__text, .basket__empty__text{
     margin-top: 21px;
     margin-left: 405px;
 
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 37px;
     letter-spacing: 0.02em;
 }
+
 .line{
     border: 1px solid #8D8D8D;
+
     width: 99.92%;
+
     margin-top: 33px;
 }
-.all{
-    display: flex;
-    width: 1110px;
-    margin-top: 21px;
-    margin-left: 405px;
-    /* border: 1px solid red; */
-}
-.all__ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: flex-start;
-    align-items: flex-end;
-    height: 336px;
-    width: 254px;
-    /* border: 1px solid green; */
-    
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
 
-    color: #737373;
-}
-.ul__catigory{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    list-style: none;
-    font-size: 18px;
-    line-height: 22px;
-    margin-left: 14px;
-    margin-top: 16px;
-}
-.category__text{
-    width: 240px;
-    display: flex;
-    justify-content: space-between;
-}
-#all__img{
-    margin-left: 21px;
-    margin-top: 35px;
-}
-.category__number{
-    /* margin-left: 30px; */
-    padding:  0 10px  0 10px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: right;
-    letter-spacing: 0.02em;
-
-    color: #000000;
-
-}
-.all__goods{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 42px;
-    margin-top: 42px;
-    width: 825px;
-    margin-left: 690px;
-    /* border: 1px solid black; */
-}
-.goods__block{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 255px;
-    height: 422px;
-    /* border: 1px solid orangered; */
-    
-}
-.block__text_goods{
-    font-family: 'Montserrat';
-    font-style: normal;
-    text-align: center;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    
-    color: #737373;
-}
-.block__text_categories{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: right;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-
-    color: #737373;
-}
-.block__text_price_ruble{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #000000;
-}
 /* ___________________________________________________Выпадающий список_____________________________________ */
-.list-reset{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-}
-.menu{
-    display: inline-flex;
-    align-items: center;
-    /* flex-wrap: wrap; */
-}
-.menu__item:not(:last-child){
-    margin-right: 30px;
-}
-.menu__item{
-    position: relative;
-}
-.menu__btn{
-    cursor: pointer;
-    background: white;
-    color: #212121;
-    border: none;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease-in-out;
-}
-.menu__btn--active{
-    background-color: #cba286;
-}
 .dropdown{
     /* display: none; */
     position: absolute;
@@ -359,120 +63,44 @@ body{
 }
 
 
-/* footer_____________________________________________________________________ */
-.footer{
-    display: flex;
-    flex-direction: row;
-    margin-top: 300px;
-    background: #212121;
-    width: 100%;
-    height: 311px;
-}
-
-.footer__all{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    /* gap: ; */
-    width: 1176px;
-    margin-top: 79px;
-    margin-left: 379px;
-    /* margin-right: 504px; */
-    /* border: 1px solid blue; */
-    
-}
-
-.footer__all__logo__text{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-.footer__all__logo{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    /* border: 1px solid red; */
-}
-.footer__all__worked, .footer__all__categories, .footer__all__social_networks{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.teams, .categories, .social_networks{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 12px;
-    /* display: flex;
-    align-items: center; */
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-.worker, .men, .women{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #CBCFD4;
-}
-.social_networks__block{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    color: white;
-}
-.url{
-    text-decoration: none;
-    color: #737373;
-}
-.url2{
-    text-decoration: none;
-}
-.url3{
-    text-decoration: none;
-    color: white;
-}
 /* _________________________________________Корзина________________________________________ */
 .goods__basket{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 42px;
-    margin-top: 42px;
+
     width: 1110px;
-    margin-left: 405px;
-    /* border: 1px solid black; */
+
+    margin: 42px auto;    
+
 }
+
 .goods__block__basket{
     display: flex;
     align-items: center;
-    /* gap: 20px; */
-    width: 100%;
     justify-content: space-between;
+
+    width: 100%;
 }
+
 .basket__img__text{
     display: flex;
     align-items: center;
+
     width: 400px;
 }
+
 .basket__text{
-    padding-left: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: flex-start;
+    gap: 20px;
+
+    padding-left: 10px;
 }
+
 .basket__text_goods{
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
@@ -480,9 +108,8 @@ body{
     text-transform: uppercase;
     color: #737373;
 }
+
 .basket__text_categories{
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
@@ -491,13 +118,13 @@ body{
     text-transform: uppercase;
     color: #737373;
 }
+
 .basket__img{
     width: 155px;
     height: 244/2px;
 }
+
 .basket__amoynt__text{
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -506,23 +133,34 @@ body{
     text-transform: uppercase;
     color: #212121;
 }
+
 .basket__amoynt{
     display: flex;
+    align-items: center;
     gap: 20px;
 }
+
 .basket__amoynt__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border: 1px solid #af8466;
+    border-radius: 5px;
     background: #cba286;
+
     width: 20px;
+    height: 20px;
 }
+
 .basket__amoynt__btn:hover{
     border: 1px solid #946b4e;
     background: #af8466;
+
     cursor: pointer;
 }
+
 .basket__text_price_ruble{
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 17px;
@@ -530,46 +168,56 @@ body{
     text-transform: uppercase;
     color: #000000;
 }
-.bi-x-circle{
-    font-size: 30px;
-}
-.bi-x-circle:hover{
-    font-size: 30px;
-    color: #946b4e;
-    border-radius: 30px;
+
+.basket__icons__cancel:hover{
+    background-color: #cba286;
+    border-radius: 16px;
+    
     cursor: pointer;
 }
+
 .making__order{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
+
     margin-left: 1216px;    
+
     width: 300px;
 }
+
 .btnOrder{
-    border: 1px solid black;
     width: 300px;
     height: 40px;
+
+    border: 1px solid black;
     background-color: #D7B399;
     border-radius: 30px;
+
     font-size: 16px;
     font-weight: 600;
 }
+
 .btnOrder:hover{
     background-color: #af8466;
+
     cursor: pointer;
 }
+
 .block__sum__price{
-    margin-top: 10px;
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
     font-size: 20px;
     font-weight: 600;
 }
+
 .sum__price__number{
     padding-right: 10px;
 }
+
 .dispNone{
     display: none;
 }

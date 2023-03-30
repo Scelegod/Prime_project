@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     font-family: 'Montserrat', sans-serif;    
-    
 }
 
 /* header_______________________________________________________________________________ */
@@ -43,8 +43,10 @@
 
 .header__menu__line{
     border: 1px solid #af8466;
+
     height: 48px;
 }
+
 .header__menu__number{
     font-size: 12px;
     line-height: 17px;
@@ -68,11 +70,9 @@
     align-items: center;
     
     width: 1136px;
-    
     height: 40px;
     
     font-weight: 500;
-    
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.03em;
@@ -123,8 +123,10 @@
 
 .basket__first_part{
     margin-right: -20px;
+
     width: 13px;
     height: 13px;
+
     background: #D7B399;
     transform: rotate(-45deg);
 }
@@ -132,11 +134,13 @@
 .basket__second_part{
     width: 33px;
     height: 15px;
+
     background: #D7B399;
 }
 
 .basket__number{
     margin-left: -40px;
+
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -194,8 +198,9 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-.menu__btn_women_btn--active{
+.menu__btn_women_btn:hover, .menu__btn_men_btn:hover{
     background-color: #cba286;
+    border-radius: 5px;
 }
 
 .menu{
@@ -207,8 +212,11 @@
 .footer{
     display: flex;
     flex-direction: row;
+
     margin-top: 80px;
+
     background: #212121;
+
     width: 100%;
 }
 
@@ -216,18 +224,13 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    /* gap: ; */
+
     width: 1176px;
-    margin-top: 79px;
-    margin-left: 379px;
-    /* margin-right: 504px; */
-    /* border: 1px solid blue; */
-    
+
+    margin: 79px auto 20px;
 }
 
 .footer__all__logo__text{
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -240,36 +243,48 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    /* border: 1px solid red; */
 }
+
 .footer__all__worked, .footer__all__categories, .footer__all__social_networks{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 .teams, .categories, .social_networks{
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 12px;
-    /* display: flex;
-    align-items: center; */
     text-transform: uppercase;
     color: #FFFFFF;
 }
+
 .worker, .men, .women{
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
     color: #CBCFD4;
 }
+
 .social_networks__block{
     display: flex;
     gap: 5px;
     align-items: center;
+    
     color: white;
 }
 
+.block__img{
+    width: 255px;
+    height: 344px;
+}
+
+@media (max-width: 1024px) {
+    .header__menu{
+        width: 900px;
+    }
+
+    .screen__menu{
+        width: 900px;
+    }
+}

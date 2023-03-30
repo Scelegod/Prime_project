@@ -3,8 +3,6 @@
 function saveCartToLs(){
     localStorage.setItem('cart', JSON.stringify(cartData))
 }
-let str = localStorage.getItem('arr');
-let goodsInfo2 = JSON.parse(str);
 
 function checkCart(){
     //Проверяю наличие корзины в localStorage

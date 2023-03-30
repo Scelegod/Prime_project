@@ -27,7 +27,6 @@ window.addEventListener('click', function(event){
             let gbb = event.target.closest('.goods__block__basket');
             let counti = gbb.querySelector('[data-count="'+gbb.dataset.id+'"]');
             for(let i in cartData){
-                console.log(i);
                 if(counti.dataset.count == i){
                     cartData[i][2]--;
                 }
@@ -42,8 +41,6 @@ window.addEventListener('click', function(event){
         counter.textContent = ++counter.textContent;
         let gbb = event.target.closest('.goods__block__basket');
         let counti = gbb.querySelector('[data-count="'+gbb.dataset.id+'"]');
-        console.log(counti.dataset.count);
-        console.log(gbb.dataset.id);
         for(let i in cartData){
             if(counti.dataset.count == i){
                 cartData[i][2]++;
@@ -54,7 +51,7 @@ window.addEventListener('click', function(event){
     }
     
     //_______________________________Функция отслежиния есть ли товар в корзине___________________________________________________________________
-    if(event.target.closest('.bi-x-circle')){
+    if(event.target.closest('.basket__icons__cancel')){
         event.target.closest('.goods__block__basket').remove();
         let gbb = event.target.closest('.goods__block__basket');
             let del = gbb.querySelector('[data-del="'+gbb.dataset.id+'"]');

@@ -1,5 +1,4 @@
 let goods__block = document.querySelectorAll('.goods__block');
-// let basket__number = document.querySelector('.basket__number');
 let basket__number = document.querySelector('.basket__number');
 
 let number = localStorage.getItem('basket__number');
@@ -8,11 +7,6 @@ let number = localStorage.getItem('basket__number');
 
 goods__block.forEach((el, idx) => {
     const btn = el.childNodes[0].childNodes[1];
-    console.dir(el);
-    // let img = el.childNodes[0].childNodes[0].src;
-    // let title = el.childNodes[1].innerText;
-    // let catigories = el.childNodes[2].innerText;
-    // let price = el.childNodes[3].childNodes[0].innerText;
     let id = el.dataset.id;
     btn.addEventListener('click', (e) =>{
         let cartData = getCartData() || {},
@@ -28,7 +22,6 @@ goods__block.forEach((el, idx) => {
             cartData[id] = [title, price, 1, catigories, img];
         }
         if(!setCartData(cartData)){ // Обновляем данные в LocalStorage
-            //   this.disabled = false; // разблокируем кнопку после обновления LS
             let sum = 0;
             for(let i in cartData){
                 sum = sum + cartData[i][2];
@@ -37,12 +30,6 @@ goods__block.forEach((el, idx) => {
 
             }
         }
-        // const cartStorage = localStorage.getItem('cart') || "[]";
-        // const cart = JSON.parse(cartStorage);
-        
-        // const card = { id, img, title, catigories, price, counter: 1};
-        
-        // localStorage.setItem("cart", JSON.stringify([...cart, card]));
     });
 });
 
