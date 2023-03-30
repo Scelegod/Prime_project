@@ -304,3 +304,83 @@
         gap: 20px;
     }
 }
+
+@media (max-width : 425px){
+    .screen__all{
+        height: auto;
+    }
+
+    .screen__all__text__login{
+        width: auto;
+    }
+
+    .screen__all__text {
+        flex-wrap: nowrap;
+        height: auto;
+        gap: 20px
+    }
+
+    .screen__all__text__icons{
+        display: none;
+    }
+
+    .text__login, .text__login__hint{
+        font-size: 18px;
+    }
+
+    .text__button{
+        font-size: 14px;
+    }
+    
+    .window__body{
+        padding: 20px 20px;
+        width: auto;
+        margin: 10px 10px;
+    }
+
+    .window__close{
+        left: 360px;
+    }
+
+    .window__body__text2.active{
+        font-size: 18px;
+    }
+
+    #inpmail, #inppas, #inpname, #inpmail2, #inppas2, #inppas3{
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width : 375px){
+    .screen__all{
+        margin: 0 10px;
+    }
+    .screen__all__text{
+        width: auto;
+        margin: 0 20px;
+    }
+
+    .text__login, .text__login__hint{
+        font-size: 14px;
+    }
+
+    .orders__text, .bonuses__text, .discounts__text{
+        font-size: 12px;
+    }
+
+    .text__button{
+        width: auto;
+        text-align: center;
+    }
+    
+    .window__close{
+        left: 310px;
+    }
+}
+
+@media (max-width : 375px){
+    .window__close{
+        left: 260px;
+    }
+}

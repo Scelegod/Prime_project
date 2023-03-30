@@ -335,6 +335,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 10px;
 }
 
 .sidenav__img__logo{
@@ -347,6 +348,7 @@
     flex-direction: column;
     gap: 20px;
 
+    width: 240px;
     font-weight: 500;
 }
 
@@ -355,13 +357,13 @@
     text-decoration: none;
 }
 
-.sidenav__menu__subitem .category__text:hover,.sidenav__menu__subitem .category__text .category__number:hover {
+.sidenav__menu__subitem .sidenav__category__text:hover,.sidenav__menu__subitem .category__text .sidenav__category__number:hover {
     background-color: #af8466;
     color: #FFFFFF;
 }
 
 .sidenav__menu__item:hover{
-    color: #bebebe;
+    color: #FFFFFF;
 }
 
 @media (max-width : 1440px) {
@@ -382,6 +384,22 @@
         width: 900px;
     }
     
+    .basket{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        padding: 5px 5px 5px 0px;
+    }
+    
+    .basket__num{
+        padding: 0 10px 0 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
 }
 
 @media (max-width: 768px){
@@ -403,6 +421,7 @@
         height: 46px;
     }
     
+
     .screen__menu {
         width: 700px;
     }
@@ -416,12 +435,17 @@
     .header, .header__menu, .header__menu__left_bar, .header__menu__right_bar, .header__menu__line{
         height: 38px;
     }
+
+    .screen__menu__logo{
+        margin-left: 20px;
+    }
     
     .menu__burger__line{
         width: 26px;
     }
 
     .menu__burger{
+        top: 72px;
         height: 32px;
     }
     .header__menu{
@@ -458,5 +482,65 @@
         flex-direction: row-reverse;
         flex-wrap: wrap;
         gap: 20px;
+    }
+}
+
+@media (max-width: 425px){
+    .header__menu{
+        width: auto;
+    }
+
+    .header__menu__left_bar, .header__menu__right_bar{
+        gap: 5px;
+    }
+
+    .screen__menu__logo{
+        margin: 0 145px 0px 0px;
+    }
+
+    .screen__menu__logo__text{
+        font-size: 18px;
+    }
+
+    .screen__menu__logo__img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .header__menu__shop, .header__menu__stocks, .header__menu__number, .header__menu__text{
+        font-size: 9px;
+    }
+    
+    .screen__menu{
+        width: auto;
+    }
+    
+    
+    .screen__menu__logo{
+        gap: 5px;
+    }
+
+    .screen__menu__right_bar{
+        display: none;
+    }
+
+    .footer__all{
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 375px){
+    .screen__menu__logo{
+        margin: 0 120px 0px 0px;
+    }
+}
+
+@media (max-width: 320px){
+    .screen__menu__logo{
+        margin: 0 90px 0px 0px;
+    }
+
+    .footer__all{
+        flex-direction: row;
     }
 }

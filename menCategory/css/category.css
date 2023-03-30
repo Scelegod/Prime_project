@@ -78,7 +78,7 @@ body{
     margin-top: 16px;
 }
 
-.category__text{
+.category__text , .sidenav__category__text{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +90,7 @@ body{
     border-radius: 5px;
 }
 
-.category__number, .category__number_new, .category__number_dis{
+.category__number, .category__number_new, .category__number_dis , .sidenav__category__number, .sidenav__category__number_new, .sidenav__category__number_dis{
     padding:  0 10px  0 10px;
 
     font-weight: 400;
@@ -371,4 +371,33 @@ body{
         width: 178px;
         height: 240px;
     }
+}
+
+@media (max-width : 375px){
+    #all__img{
+        width: 300px;
+        height: auto;
+    }
+
+    .men__all__goods, .all__goods{
+        width: 300px;
+    }
+
+    .new_models, .discount, .goods__block{
+        width: 140px;
+        height: auto;
+    }
+
+    .block__img{
+        width: 140px;
+        height: auto;
+    }
+
+    .btnBasket, .btnBasket_hover, .block__text_goods, .block__text_categories , .block__text_price_ruble, .discount__items__oldprice{
+        font-size: 12px;
+    }
+    .block__text_price_ruble.discount-price{
+        font-size: 14px;
+    }
+
 }

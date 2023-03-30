@@ -33,7 +33,6 @@ window.addEventListener('click', function(event){
             }
             calcGoodsPrice();
             setCartData(cartData);
-
         }
     }
     //_______________________________Условия нажатия по...___________________________________________________________________

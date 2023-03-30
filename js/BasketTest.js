@@ -1,9 +1,11 @@
 let goods__block = document.querySelectorAll('.goods__block');
 let basket__number = document.querySelector('.basket__number');
+let basket__num = document.querySelector('.basket__num');
 
 let number = localStorage.getItem('basket__number');
     let number2 = JSON.parse(number);
     basket__number.textContent = number2;
+    basket__num.textContent = number2;
 
 goods__block.forEach((el, idx) => {
     const btn = el.childNodes[0].childNodes[1];
@@ -26,6 +28,7 @@ goods__block.forEach((el, idx) => {
             for(let i in cartData){
                 sum = sum + cartData[i][2];
                 basket__number.textContent = sum;
+                basket__num.textContent = sum;
                 localStorage.setItem('basket__number', JSON.stringify(basket__number.textContent));
 
             }

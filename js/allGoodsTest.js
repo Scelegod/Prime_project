@@ -153,13 +153,13 @@ let allGoodsTest = {
     "808" : {src: './assets/img/newShoes_1.png',   name: 'ORCHID BAROCCO ODISSEA SNEAKERS',     catigories: 'Обувь',             price:'8100',  dataCatigories:'women', dataType:'new', class: 'goods__block shoes_women new_models'},
 
     //Скидочные модели
-    "1200" : {src: './assets/img/disJacket_1.png', name: 'LE MASCHERE BOMBER JACKET',           catigories: 'Куртка',            oldprice:'18 100 ₽',price:'9 100',  dataCatigories:'men', dataType:'discount', class: 'goods__block jacket_men discount'},
+    "1200" : {src: './assets/img/disJacket_1.png', name: 'LE MASCHERE BOMBER JACKET',           catigories: 'Куртка',            oldprice:'18 100 ₽',price:'9100',  dataCatigories:'men', dataType:'discount', class: 'goods__block jacket_men discount'},
     "1201" : {src: './assets/img/disShoes_1.png',  name: 'PYTHON PRINT TRIGRECA SNEAKERS',      catigories: 'Обувь',             oldprice:'8 900 ₽', price:'4100',   dataCatigories:'men', dataType:'discount', class: 'goods__block shoes_men discount'},
     "1202" : {src: './assets/img/disPants_1.png',  name: 'WIDE CARGO PANTS',                    catigories: 'Брюки',             oldprice:'12 300 ₽',price:'6100',   dataCatigories:'women', dataType:'discount', class: 'goods__block pants_women discount'},
     "1203" : {src: './assets/img/disTshirts_1.png',name: 'VERSACE GODDESS LONG-SLEEVED T-SHIRT',catigories: 'Хлопковая футболка',oldprice:'5 300 ₽', price:'2900',   dataCatigories:'women', dataType:'discount', class: 'goods__block tshirts_women discount'},
     "1204" : {src: './assets/img/disShoes_2.png',  name: 'SLASHED ODISSEA SNEAKERS',            catigories: 'Обувь',             oldprice:'9 900 ₽', price:'8100',   dataCatigories:'men', dataType:'discount', class: 'goods__block shoes_men discount'},
     "1205" : {src: './assets/img/disHomClot_1.png',name: `VERSACE ALLOVER PAJAMA TOP`,          catigories: 'Домашняя одежда',   oldprice:'11 800 ₽',price:'5900',   dataCatigories:'men', dataType:'discount', class: 'goods__block homclot_men discount'},
-    "1206" : {src: './assets/img/disShoes_2.png',  name: 'ODISSEA SNEAKERS',                    catigories: 'Обувь)',            oldprice:'7 200 ₽', price:'3600',   dataCatigories:'women', dataType:'discount', class: 'goods__block shoes_women discount'},
+    "1206" : {src: './assets/img/disShoes_2.png',  name: 'ODISSEA SNEAKERS',                    catigories: 'Обувь',             oldprice:'7 200 ₽', price:'3600',   dataCatigories:'women', dataType:'discount', class: 'goods__block shoes_women discount'},
     "1207" : {src: './assets/img/disHomClot_2.png',name: `VERSACE ALLOVER PAJAMA BOTTOMS`,      catigories: 'Домашняя одежда',   oldprice:'9 000 ₽', price:'4500',   dataCatigories:'men', dataType:'discount', class: 'goods__block homclot_men discount'},
     "1208" : {src: './assets/img/disPants_2.png',  name: 'STRIPED WOOL PANTS',                  catigories: 'Брюки',             oldprice:'8 100 ₽', price:'4050',   dataCatigories:'men', dataType:'discount', class: 'goods__block pants_men discount'},
 }

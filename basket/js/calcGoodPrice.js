@@ -3,6 +3,7 @@ function calcGoodsPrice(){
     let goods__block__basket = document.querySelectorAll('.goods__block__basket');
     let sum__price__number = document.querySelector('.sum__price__number');
     let basket__number = document.querySelector('.basket__number');
+    let basket__num = document.querySelector('.basket__num');
 
     let totalAmount = 0;
     let totalPrice = 0;
@@ -18,5 +19,6 @@ function calcGoodsPrice(){
     })
     sum__price__number.textContent = totalPrice;
     basket__number.textContent = totalAmount;
+    basket__num.textContent = totalAmount;
     localStorage.setItem('basket__number', JSON.stringify(basket__number.textContent));
 }

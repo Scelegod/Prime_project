@@ -271,9 +271,10 @@ body{
     .basket__img__text{
         width: 300px;
     }
-
+    
     .basket__amoynt {
         width: 90px;
+        gap: 10px;
         flex-wrap: wrap;
     }
 
@@ -286,3 +287,124 @@ body{
     }
 }
 
+@media (max-width : 425px){
+    .path{
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .path__basket__text{
+        margin-left: 20px;
+        font-size: 19px;
+    }
+
+    .basket__empty__text{
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    .goods__basket{
+        width: 400px;
+    }
+    
+    .goods__block__basket{
+        flex-direction: column;
+        gap: 5px;
+        
+        position: relative;
+    }
+    
+    .basket__img__text{
+        width: 400px;
+        /* align-items: normal; */
+    }
+
+    .basket__amoynt{
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        width: auto;
+
+        position: absolute;
+        top: 150px;
+        left: 164px;
+    }
+
+    .basket__text_price_ruble{
+        position: absolute;
+        top: 180px;
+        left: 240px;
+    }
+
+    .basket__icons{
+        position: absolute;
+        top: 10px;
+        left: 360px;
+    }
+
+    .making__order{
+        margin-left: 100px;
+        align-items: flex-end;
+    }
+
+    .block__sum__price{
+        font-size: 16px;
+    }
+
+    .btnOrder{
+        width: 200px;
+    }
+}
+
+
+@media (max-width : 375px){
+    .goods__basket, .goods__block__basket{
+        width: auto;
+    }
+
+    .basket__img__text{
+        width: auto;
+        align-items: flex-start;
+    }
+
+    .basket__icons{
+        left: 335px;
+        top: 36px;
+
+    }
+    
+    .basket__icons__cancel{
+        width: 30px;
+        height: 30px;
+    }
+
+    .basket__amoynt{
+        flex-wrap: wrap;
+
+        top: 100px;
+        left: 156px;
+
+        width: 100px;
+    }
+
+    .basket__img{
+        width: 140px;
+        height: auto;
+    }
+
+    .basket__text_price_ruble{
+        top: 160px;
+        left: 172px;
+    }
+
+    .making__order{
+        width: auto;
+    }
+    
+}
+@media (max-width : 320px){
+    .basket__icons{
+        left: 280px;
+        top: 0;
+    }
+}
