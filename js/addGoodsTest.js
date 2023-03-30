@@ -282,7 +282,7 @@ for(let elem in allGoodsTest){
         }
     }
 
-    if(window.location.href.endsWith("index.html")){
+    if(window.location.href.endsWith("index.html") || window.location.href.endsWith("Prime_project/")){
         const new_models__all = document.querySelector('.new_models__all');
         if(elem == "800" || elem == "801"  || elem == "802" || elem == "803"){
 

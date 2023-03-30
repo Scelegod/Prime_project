@@ -39,6 +39,7 @@ body{
 
 .all{
     display: flex;
+    gap: 20px;
 
     width: 1110px;
 
@@ -47,6 +48,7 @@ body{
 
 .all__ul{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-start;
@@ -282,29 +284,35 @@ body{
 }
 
 /* _____________________________________________Адаптивка_____________________________________________ */
-/* @media (max-width : 1440px) {
-    .header__menu{
-        margin-left: 200px;
-        width: 1000px;
-    }
-    .screen__menu{
-        margin-left: 190px;
-        width: 1030px;
-    }
+@media (max-width : 1440px) {
+
     .path{
         margin-left: 190px;
     }
-    .men_clothing__text, .basket__empty__text{
-        margin-left: 220px;
-    }
-    .all{
-        margin-left: 200px;
-    }
-    .all__goods{
-        margin-left: 474px;
-    }
-    .footer__all{
+
+    .men_clothing__text, .basket__empty__text, .women_clothing__text{
         margin-left: 190px;
-        width: 1000px;
     }
-} */
+
+    .all__goods{
+        margin-left: 484px;
+    }
+}
+
+@media (max-width : 1024px){
+    .header__menu{
+        width: 900px;
+    }
+
+    .all{
+        width: auto;
+    }
+
+    #all__img{
+        width: 740px;
+    }
+
+    .all__goods{
+        margin: 0 auto;
+    }
+}

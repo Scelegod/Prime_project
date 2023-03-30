@@ -223,63 +223,41 @@ body{
 }
 
 /* _____________________________________________Адаптивка_____________________________________________ */
-/* @media (min-width: 1440px) {
-    .header__menu{
-        margin-left: 160px;
-        width: 1086px;
-    }
-} */
 @media (max-width : 1440px) {
-    .header__menu{
-        margin-left: 200px;
-        width: 1000px;
-    }
-    .screen__menu{
-        margin-left: 190px;
-        width: 1030px;
-    }
     .path{
         margin-left: 190px;
     }
+
+    .path__basket__text{
+        margin-left: 196px;
+    }
+
     .men_clothing__text, .basket__empty__text{
         margin-left: 220px;
     }
-    .goods__basket{
-        margin-left: 200px;
-        width: 1040px;
-    }
+
     .making__order{
-        margin-left: 934px;
-    }
-    .footer__all{
-        margin-left: 190px;
-        width: 1000px;
+        margin-left: 970px;
     }
 }
 @media (max-width : 1024px) {
-    .header__menu{
-        margin-left: 100px;
-        width: 800px;
-    }
-    .screen__menu{
-        margin-left: 90px;
-        width: 820px;
-    }
     .path{
         margin-left: 90px;
     }
+
+    .path__basket__text{
+        margin-left: 98px;
+    }
+
     .men_clothing__text, .basket__empty__text{
         margin-left: 120px;
     }
+
     .goods__basket{
-        margin-left: 100px;
         width: 840px;
     }
+
     .making__order{
         margin-left: 634px;
-    }
-    .footer__all{
-        margin-left: 90px;
-        width: 800px;
     }
 }

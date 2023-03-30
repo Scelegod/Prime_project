@@ -279,9 +279,18 @@
     height: 344px;
 }
 
+@media (max-width : 1440px) {
+    .footer__all{
+        margin-left: 190px;
+        margin: 79px auto 20px;
+        width: 1000px;
+    }
+}
+
 @media (max-width: 1024px) {
     .header__menu{
-        width: 900px;
+        margin: 0 auto;
+        width: 800px;
     }
 
     .screen__menu{
