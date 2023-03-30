@@ -298,7 +298,7 @@
     gap: 5px;
 
     width: 255px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .new_models__text, .discount__text{
@@ -318,6 +318,8 @@
 .new_models__all, .discount__all{
     display: flex;
     gap: 30px;
+
+    margin-top: 50px;
 }
 
 
@@ -559,4 +561,91 @@
     .subcribe__text, .subcribe__email{
         margin: 0;
     }
+}
+
+@media (max-width: 768px){
+    .slider{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cloth_col__men{
+        padding-left: 10px;
+    }
+
+    .new_models__all, .discount__all{
+        flex-wrap: wrap;
+    }
+
+    .new_models__container, .discount__container{
+        width: 700px;
+    }
+
+    .new_models__all, .discount__all{
+        justify-content: space-around;
+    }
+
+    .slider__product__old_price{
+        font-size: 20px;
+    }
+
+    .slider__product__new_price{
+        font-size: 38px;
+    }
+
+    .slider__product__img{
+        width: 370px;
+    }
+}
+
+@media (max-width: 425px){
+    .cloth_col{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cloth_col__men, .cloth_col__women{
+        width: auto;
+    }
+
+    .cloth_col__line{
+        height: 1px;
+    }
+    .cloth_col__line-botom{
+        width: auto;
+    }
+
+    .new_models__container, .discount__container{
+        width: 400px;
+    }
+
+    .subcribe{
+        padding: 10px;
+        height: 220px;
+    }
+
+    .subcribe__text{
+        width: auto;
+        height: auto;
+    }
+
+    .new_models, .discount, .btnBasket_hover, .btnBasket{
+        width: 180px;
+    }
+
+    .block__img{
+        width: 180px;
+        height: auto;
+    }
+
+    .discount__text, .subcribe__text, .new_models__text, .new_models__text{
+        font-size: 28px;
+    }
+
+    .free_shiping_price{
+        text-align: center;
+        height: auto;
+    }
+
 }

@@ -232,7 +232,7 @@ body{
         margin-left: 196px;
     }
 
-    .men_clothing__text, .basket__empty__text{
+    .basket__empty__text{
         margin-left: 220px;
     }
 
@@ -240,6 +240,7 @@ body{
         margin-left: 970px;
     }
 }
+
 @media (max-width : 1024px) {
     .path{
         margin-left: 90px;
@@ -249,7 +250,7 @@ body{
         margin-left: 98px;
     }
 
-    .men_clothing__text, .basket__empty__text{
+    .basket__empty__text{
         margin-left: 120px;
     }
 
@@ -261,3 +262,27 @@ body{
         margin-left: 634px;
     }
 }
+
+@media (max-width : 768px){
+    .goods__basket{
+        width: 700px;
+    }
+
+    .basket__img__text{
+        width: 300px;
+    }
+
+    .basket__amoynt {
+        width: 90px;
+        flex-wrap: wrap;
+    }
+
+    .making__order{
+        margin-left: 420px;
+    }
+
+    .basket__empty__text{
+        margin-left: 100px;
+    }
+}
+

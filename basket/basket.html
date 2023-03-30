@@ -26,9 +26,33 @@
         </div>
     </div>    
 
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav__icons">
+            <img class="sidenav__icons__cancel" src="./../basket/icon/cancel.svg" alt="cancel">
+        </div>
+        <div class="sidenav__img">
+            <img class="sidenav__img__logo" src="./../assets/img/Frame.png" alt="Logo">
+            <p class="screen__menu__logo__text">the loop</p>
+        </div>
+        <div class="sidenav__menu">
+            <a class="sidenav__menu__item" href="./../index.html">Главная</a>
+            <a class="sidenav__menu__item" href="./../menCategory/menCategory.html">Мужская одежда</a>
+            <a class="sidenav__menu__item" href="./../womenCategory/womenCategory.html">Женская одежда</a>
+            <a class="sidenav__menu__item" href="#">Оплата</a>
+            <a class="sidenav__menu__item" href="#">Доставка</a>
+            <a class="sidenav__menu__item" href="./../basket/basket.html">Корзина</a>
+            <a class="sidenav__menu__item" href="./../log_in/login.html">Профиль</a>
+        </div>
+    </div>
+
     <div class="screen">
         <div class="screen__menu">
             <div class="screen__menu__left_bar">
+                <div class="menu__burger">
+                    <p class="menu__burger__line"></p>
+                    <p class="menu__burger__line"></p>
+                    <p class="menu__burger__line"></p>
+                </div>
             <ul class="menu list-reset">
                 <li class="menu__item">
                     <a href="./../menCategory/menCategory.html"><button class="menu__btn_men_btn">Мужская одежда</button></a>
@@ -135,6 +159,8 @@
             </div>
         </div>
     </div>
+
+    <script src="./../js/sidenav.js"></script>
     <script src="./js/calcGoodPrice.js"></script>
     <script src="./js/toggleGoodsStatus.js"></script>
     <script src="./../js/BasketTest.js"></script>

@@ -92,7 +92,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 2;
+    z-index: 21;
 
     transform: translateY(-44.5%) scale(0);
     transition: .4s ease-in-out;
@@ -286,5 +286,21 @@
     .screen__all{
         margin: 0 30px;
         width: auto;
+    }
+}
+
+@media (max-width : 768px) {
+    .screen__all__text{
+        padding: 10px;
+    }
+
+    .screen__all__text__login{
+        width: 400px;
+    }
+
+    .window__body{
+        margin: 10px auto;
+        padding: 60px 60px 50px;
+        gap: 20px;
     }
 }

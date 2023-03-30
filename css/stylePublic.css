@@ -290,6 +290,80 @@
     height: 344px;
 }
 
+
+
+/* Боковое меню */
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    height: 100%;
+    width: 0;
+
+    position: fixed;
+
+    z-index: 22;
+
+    top: 0;
+    left: 0;
+
+    background-color: #cba286;
+
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    transition: 0.5s all;
+}
+
+.sidenav__icons{
+    width: 200px;
+    text-align: right;
+}
+
+.sidenav__icons__cancel {
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+}
+
+.sidenav__img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sidenav__img__logo{
+    width: 40px;
+    height: 40px;
+}
+
+.sidenav__menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-weight: 500;
+}
+
+.sidenav__menu__item{
+    color: #212121;
+    text-decoration: none;
+}
+
+.sidenav__menu__subitem .category__text:hover,.sidenav__menu__subitem .category__text .category__number:hover {
+    background-color: #af8466;
+    color: #FFFFFF;
+}
+
+.sidenav__menu__item:hover{
+    color: #bebebe;
+}
+
 @media (max-width : 1440px) {
     .footer__all{
         margin-left: 190px;
@@ -307,15 +381,24 @@
     .screen__menu{
         width: 900px;
     }
-
+    
 }
 
 @media (max-width: 768px){
     .header__menu{
         width: 700px;
     }
-
+    
     .menu__burger{
+        position: fixed;
+        top: 96px;
+        z-index: 20;
+        
+        background-color: #af8466;
+        border-radius: 5px;
+
+        padding: 5px;
+
         display: flex;
         height: 46px;
     }
@@ -334,6 +417,13 @@
         height: 38px;
     }
     
+    .menu__burger__line{
+        width: 26px;
+    }
+
+    .menu__burger{
+        height: 32px;
+    }
     .header__menu{
         width: 400px;
     }
@@ -354,11 +444,6 @@
         font-size: 11px;
     }
 
-    .menu__burger{
-        display: flex;
-        height: 46px;
-    }
-    
     .screen__menu {
         width: 400px;
         margin: 30px auto;
